@@ -45,7 +45,7 @@ void printcal(int m,int y)
     for(i=1;i<m;i++)
         fdm+=daysInMonth[i];
     flag=isLeap(y);
-    if(flag==0)  
+    if(flag==0)
       fdm=(fdm+fdy+1)%7;
     else if(flag==1)
     {
@@ -58,23 +58,20 @@ void printcal(int m,int y)
     printf("SUN MON TUE WED THU FRI SAT\n");
     dim=daysInMonth[m];
     for(i=0;i<fdm;i++)
-        printf("    ");
-    for(i=1;i<=(7-fdm);i++)
-        printf("% 3d ",i);
-    printf("\n");
-    while(i<=dim)
+        printf("%4s","");
+    for(i=1;i<=dim;i++)
     {
         printf("% 3d ",i);
         if((i+fdm)%7==0)
             printf("\n");
-        i++;
+       // i++;
     }
 }
 int main()
 {
     int m,y;
-    scanf("%d",m);
-    scanf("%d",y);
-    printcal(3,2016);
+    scanf("%d",&m);
+    scanf("%d",&y);
+    printcal(m,y);
     return 0;
 }
