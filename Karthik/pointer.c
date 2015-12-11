@@ -20,9 +20,23 @@ LLNode *insertInBegin(LLNode *h,int data)
     newHead->next=h;
     return newHead;
 }
-
-//LlNode *insertInEnd(LLNode *h,int data);
-
+LLNode *insertInEnd(LLNode *h,int data)
+{
+	LLNode *temp;
+	LLNode *newNode=malloc(sizeof(LLNode));
+	newNode->data=data;
+	newNode->next=NULL;
+	if(h==NULL)
+		h=newNode;
+	else
+	{
+		temp=h;
+		while(temp->next!=NULL)
+			temp=temp->next;
+		temp->next=newNode;
+	}
+	return h;
+}
 void traverse(LLNode *h)
 {
     LLNode *temp=h;
@@ -41,6 +55,7 @@ int main()
     head=insertInBegin(head,3);
     head=insertInBegin(head,2);
     head=insertInBegin(head,1);
+	head=insertInEnd(head,6);
     traverse(head);
     return 0;
 }
