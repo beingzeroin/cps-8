@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void cyclelength(int num)
+int cyclelength(int num)
 {
     int n=1;
     while(num!=1)
@@ -23,7 +23,7 @@ void cyclelength(int num)
 int main()
 {
     int max,current=0;
-    int a,b,temp=0;
+    int a,b,i,temp=0;
 
     while(scanf("%d %d",&a,&b)==2)
     {

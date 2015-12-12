@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1449932912 source:c:\users\arra\desktop\cps-8\aravind\calander\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -3,28 +3,28 @@
 #include <string.h>
 #include <ctype.h>
 
-char a[20],c;
-
 void input()
 {
-    int i = 0;
+    char a[500],c;
+    int i = 0,j = 0,k,n;
     while((c=getchar())!=EOF)
     {
-        if(strcmp(a,""))
-        {
-            strrev(a);
-            printf("%s",a);
-        }
         if(c=='\n'||c=='\t'||c==' ')
         {
+            a[i]='\0';
+            n = strlen(a);
+            for(k=(n-1);k>=0; k--)
+            {
+                printf("%c",a[k]);
+            }
             i=0;
-            printf("%c",c);
+            putchar(c);
         }
         else
         {
             a[i++]=c;
         }
-        a[i]='\0';
+
     }
 }
 int main()
