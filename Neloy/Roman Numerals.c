@@ -70,6 +70,12 @@ char* decimalToRoman(char *s)
             s[i++]='X';
             dec=dec-10;
         }
+        else if(dec>=9)
+        {
+            s[i++]='I';
+            s[i++]='X';
+            dec=dec-9;
+        }
         else if(dec>=5)
         {
             s[i++]='V';
