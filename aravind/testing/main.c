@@ -22,13 +22,13 @@ LLNode *insertInBegining(LLNode *h,int data)
         return temp;
     else
     {
-        temp->next=head;
+        temp->next=h;
         return temp;
     }
 }
 LLNode *findLastNode(LLNode *h)
 {
-    if(h==Null)
+    if(h==NULL)
         return h;
     while(h->next!=NULL)
         h=h->next;
@@ -65,7 +65,7 @@ LLNode *deleteNodeWithValue(LLNode *h,int data)
     if(h==NULL)
         return h;
     current = previous = h;
-    if(current->data=data)
+    if(current->data==data)
     {
         h=current->next;
         free(current);
@@ -99,7 +99,8 @@ void traversal(LLNode *h)
 }
 int main()
 {
-    LLNode *head;
-
+    LLNode *head = NULL;
+    head = createSeriesList(10);
+    traversal(head);
     return 0;
 }
