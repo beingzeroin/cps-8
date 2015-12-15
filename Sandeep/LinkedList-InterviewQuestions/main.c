@@ -8,11 +8,11 @@ int main()
 {
     // EXERCISE-1
     // Implement - findIntersectionPoint - in InterviewQuestions.c
-    intersectionUnitTests();
+    // intersectionUnitTests();
 
     // EXERCISE-2
     // Implement - getKthNodeFromEnd - in InterviewQuestions.c
-    // kthNodeFromEndUnitTests();
+     kthNodeFromEndUnitTests();
 
     return 0;
 }
