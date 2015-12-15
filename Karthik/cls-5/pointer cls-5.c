@@ -115,6 +115,15 @@ int *getListLength(LLNode *head)
         }
     return count;
 }
+LLNode *getIntersectionNode(LLNode *head1,LLNode *head2)
+{
+	int len1=getListLength(head1),len2=getListLength(head2);
+	if(findLastNode(head1)!=findLastNode(head2))
+		return NULL;
+	else{
+		
+	}
+}
 int main()
 {
     LLNode *head=createSerialList(10);
