@@ -66,7 +66,7 @@ LLNode* deleteNodeWithValue(LLNode *h, int d)
     }
     else
     {
-        while(t->data != d)
+        while(t!=NULL && t->data != d)
         {
             p=t;
             t = t->next;
@@ -76,13 +76,13 @@ LLNode* deleteNodeWithValue(LLNode *h, int d)
             h=t->next;
             free(t);
         }
+        else if(t==NULL)
+            return h;
         else if(t->next == NULL)
         {
             p->next = NULL;
             free(t);
         }
-        else if(t==NULL)
-            return h;
         else
         {
             p->next=t->next;
@@ -103,8 +103,50 @@ LLNode *createSerialList(int n)
     return h;
 }
 
+int findLengthOfList(LLNode *h)
+{
+    int c=0;
+    while(h!=NULL)
+    {
+        c++;
+        h=h->next;
+    }
+return c;
+}
+
+LLNode* findIntersection(LLNode *h1,LLNode *h2)
+{
+    int l1,l2;
+    l1=findLengthOfList(h1);
+    l2=findLengthOfList(h2);
+
+    if(findLastNode(h1)!=findLastNode(h2))
+        return NULL;
+
+    if(l1>l2)
+    {
+        l1=l1-l2;
+        for(l2=0;l2<l1;l2++)
+            h1 = h1->next;
+    }
+    else
+    {
+        l2=l2-l1;
+        for(l1=0;l1<l2;l1++)
+            h2 = h2->next;
+    }
+
+    while(h1!=h2)
+    {
+        h1=h1->next;
+        h2=h2->next;
+    }
+return h1;
+}
+
 int main()
 {
+    /*
     LLNode *head = createSerialList(10);
     traverse(head);
     printf("\n");
@@ -117,18 +159,35 @@ int main()
     traverse(head);
     printf("\n");
 
-    head = deleteNodeWithValue(head,10);
-    traverse(head);
-    printf("\n");
-
     head = deleteNodeWithValue(head,15);
     traverse(head);
     printf("\n");
 
-    deleteNodeWithValue(NULL,5);
 
-
-
+    head = deleteNodeWithValue(head,10);
     traverse(head);
+    printf("\n");
+
+    deleteNodeWithValue(NULL,5);
+*/
+
+    LLNode *h1 = createSerialList(7);
+    LLNode *h2 = NULL;
+    h2 = insertAtEnd(h2,8);
+    h2 = insertAtEnd(h2,9);
+    LLNode *t1,*t2;
+    t1 = h1;
+    t2 = h2;
+    while(t1->data != 5)
+        t1=t1->next;
+    while(t2->next!=NULL)
+        t2=t2->next;
+    t2->next=t1;
+
+    traverse(h1);
+    printf("\n");
+    traverse(h2);
+    printf("\n");
+    printf("%x %d",findIntersection(h1,h2),findIntersection(h1,h2)->data);
     return 0;
 }
