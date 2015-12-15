@@ -11,14 +11,14 @@ int getSonarCount(int r,int c)
 	{
         if(c%3==2)
 			count+=((c-2)/3);
-		else if(c%3==1);
+		else if(c%3==1)
 			count+=((c-1)/3);
 	}
 	else if(r%3!=0 && c%3==0)
 	{
         if(r%3==2)
 			count+=((r-2)/3);
-		else if(r%3==1);
+		else if(r%3==1)
 			count+=((r-1)/3);
 	}
     else if(r%3==0 && c%3==0)

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1449906041 source:c:\users\arra\desktop\cps-8\aravind\testing\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+

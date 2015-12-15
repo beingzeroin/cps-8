@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct n LLNode;
+struct n
+{
+    int data;
+    LLNode *next;
+
+};
+LLNode *createNode(int data)
+{
+    LLNode *t=malloc(sizeof(struct n));
+    t->data=data;
+    t->next=NULL;
+    return t;
+    //check error
+}
+LLNode *insertInBegining(LLNode *head,int data)
+{
+    LLNode *t=createNode(data);
+    t->next=head;
+    return t;
+
+}
+LLNode *insertInEnding(LLNode *head,int data)
+{
+    LLNode *t=createNode(data);
+    LLNode *temp=head;
+    if(head->next==NULL)
+    {
+        head->next=t;
+    }
+    else
+    {
+        while(head->next!=NULL)
+            temp=temp->next;
+        temp->next=t;
+    }
+return head;
+}
+void traverse(LLNode *head)
+{
+    LLNode *c=head;
+    while(c!=NULL)
+    {
+        printf("%d\t",c->data);
+        c=c->next;
+    }
+}
+
+int main()
+{
+    LLNode *head=NULL;
+    head=createNode(6);
+   //head=insertInEnding(head,7);
+    head=insertInBegining(head,5);
+    head=insertInBegining(head,4);
+    head=insertInBegining(head,3);
+    head=insertInEnding(head,1);
+    //traverse(head);
+return 0;
+}
