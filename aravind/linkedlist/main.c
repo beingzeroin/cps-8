@@ -22,26 +22,24 @@ LLNode *insertInBegin(LLNode *h,int data)
     temp->next = h;
     return temp;
 }
+LLNode *findLastNode(LLNode *h)
+{
+    while(h->next!=NULL)
+    {
+        h = h->next;
+    }
+    return h;
+}
 LLNode *insertInEnd(LLNode *h,int data)
 {
     LLNode *l;
     LLNode *temp = createLLNode(data);
     if(h==NULL)
         return temp;
-    l = findLastNode(data);
+    l = findLastNode(h);
     l->next= temp;
     return h;
 }
-/*LLNode *findLastNode(LLNode *h)
-{
-    if(h==NULL)
-        return h;
-    while(h->next!=NULL)
-    {
-        h=h->next;
-    }
-    return h;
-}*/
 LLNode *deleteLLNodeWithValue(LLNode *h,int data)
 {
     LLNode *previous, *current;
@@ -79,7 +77,7 @@ LLNode *deleteLLNodeWithValue(LLNode *h,int data)
 }
 LLNode *createSerialList(int n)
 {
-    LLNode *h = NULL;
+    LLNode *h;
     int i;
     for(i=1;i<=n;i++)
         h = insertInEnd(h, i);
@@ -88,7 +86,7 @@ LLNode *createSerialList(int n)
 void traverse(LLNode *h)
 {
     LLNode *t = h;
-    while(t!=NULL)
+    while(t->next!=NULL)
     {
         printf("%d ",t->data);
         t = t->next;
@@ -97,7 +95,8 @@ void traverse(LLNode *h)
 int main()
 {
 
-    LLNode *head = createSerialList(10);
+    LLNode *head = NULL;
+    head = createSerialList(10);
     /*
     head = insertInBegin(head, 5);
     head = insertInBegin(head, 4);
