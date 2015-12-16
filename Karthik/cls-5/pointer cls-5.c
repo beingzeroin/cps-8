@@ -31,8 +31,8 @@ LLNode *insertInBegin(LLNode *h,int data)
 }
 LLNode *insertInEnd(LLNode *h,int data)
 {
-	LLNode *temp;
-	LLNode *newNode=createLLNode(data);
+    LLNode *temp;
+    LLNode *newNode=createLLNode(data);
 	if(h==NULL)
 		h=newNode;
 	else
@@ -61,64 +61,72 @@ LLNode *createSerialList(int n)
         head=insertInEnd(head,i);
     return head;
 }
-LLNode *deleteNodeWithValue(LLNode *h,int data)
+LLNode *deleteNodeWithValue(LLNode *head,int data)
 {
-    LLNode *cur=h,*prev=NULL;
-    if(cur==NULL)
-        return cur;
-    else if(cur->data=data)
+    LLNode *cur=head,*prev=NULL;
+    while(cur!=NULL)
     {
-        h=h->next;
-        free(cur);
-        free(prev);
-        return h;t
+        if(cur->data==data)
+        {
+            if(prev==NULL)
+            {
+                cur=cur->next;
+                return cur;
+            }
+            else
+            {
+                prev->next=cur->next;
+                free(cur);
+                return head;
+            }
+        }
+        prev=cur;
+        cur=cur->next;
     }
+    if(head==NULL || cur==NULL)
+        return head;
+}
+LLNode *getNodePointer(LLNode *head,int data)
+{
+	LLNode *cur=head,*prev=NULL;
+	if(head==NULL)
+		return NULL;
+	else
+		while(cur!=NULL)
+		{
+			if(cur->data==data)
+				return cur;
+			prev=cur;
+			cur=cur->next;
+		}
+	return NULL;
+}
+int *getListLength(LLNode *head)
+{
+    LLNode *temp=head;
+    int count=0;
+    if(head==NULL)
+        return 0;
     else
-    {
-        while(cur->data!=data || cur!=NULL)
+        while(temp!=NULL)
         {
-            prev=cur;
-            cur=cur->next;
+            count++;
+            temp=temp->next;
         }
-        if(cur==NULL)
-            return h;
-        else if(cur->next==NULL)
-        {
-            prev->next=NULL;
-            free(cur);
-            return h;
-        }
-        else
-        {
-            prev->next=cur->next;
-            free(cur);
-            return h;
-        }
-    }
+    return count;
+}
+LLNode *getIntersectionNode(LLNode *head1,LLNode *head2)
+{
+	int len1=getListLength(head1),len2=getListLength(head2);
+	if(findLastNode(head1)!=findLastNode(head2))
+		return NULL;
+	else{
+		
+	}
 }
 int main()
 {
     LLNode *head=createSerialList(10);
     traverse(head);
-    head=deleteNodeWithValue(head,1);
-    traverse(head);
-    head=deleteNodeWithValue(head,10);
-    traverse(head);
-    head=deleteNodeWithValue(head,5);
-    traverse(head);
-    /*
-    head=deleteNodeWithValue(head,15);
-    traverse(head);
-    head=deleteNodeWithValue(NULL,1);
-    traverse(head);
-
-    head=insertInBegin(head,5);
-    head=insertInBegin(head,4);
-    head=insertInBegin(head,3);
-    head=insertInBegin(head,2);
-    head=insertInBegin(head,1);
-	head=insertInEnd(head,6);
-    traverse(head);
-    */
     return 0;
 }

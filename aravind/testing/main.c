@@ -1,34 +1,106 @@
+#include <stdio.h>
+#include <stdlib.h>
 
-#include<stdio.h>
-#include<stdlib.h>
-
-int board[20][20];
-void generateAndPrintMinesweeperBoard(int m,int n,int mines)
+typedef struct n LLNode;
+struct n
 {
-    int i=0,a,b,j;
-    while(i<mines)
+    int data;
+    LLNode *next;
+};
+
+LLNode *createNode(int data)
+{
+    LLNode *temp = malloc(sizeof(LLNode));
+    temp->data = data;
+    temp->next = NULL;
+    return temp;
+}
+LLNode *insertInBegining(LLNode *h,int data)
+{
+    LLNode *temp = createNode(data);
+    if(h==NULL)
+        return temp;
+    else
     {
-        a = rand()%m;
-        b = rand()%n;
-        if(board[a][b]!=1)
+        temp->next=h;
+        return temp;
+    }
+}
+LLNode *findLastNode(LLNode *h)
+{
+    if(h==NULL)
+        return h;
+    while(h->next!=NULL)
+        h=h->next;
+    return h;
+}
+LLNode *insertInEnd(LLNode *h,int data)
+{
+    LLNode *temp = createNode(data);
+    if(h==NULL)
+        return temp;
+    else
+    {
+        while(h->next!=NULL)
         {
-            board[a][b]=1;
-            i++;
+            h=h->next;
+        }
+        h->next = temp;
+        return h;
+    }
+}
+LLNode *createSeriesList(int n)
+{
+    int i;
+    LLNode *h = NULL;
+    for(i=1;i<=n;i++)
+    {
+        insertInEnd(h,i);
+    }
+    return h;
+}
+LLNode *deleteNodeWithValue(LLNode *h,int data)
+{
+    LLNode *current, *previous;
+    if(h==NULL)
+        return h;
+    current = previous = h;
+    if(current->data==data)
+    {
+        h=current->next;
+        free(current);
+        return h;
+    }
+    current = current->next;
+    while(current!=NULL)
+    {
+        if(current->data==data)
+        {
+            previous->next = current->next;
+            free(current);
+            return h;
+        }
+        else
+        {
+            current = current->next;
+            previous = previous->next;
         }
     }
-    for(i=0;i<m;i++)
+    return h;
+}
+void traversal(LLNode *h)
+{
+    printf("\n");
+    while(h!=NULL)
     {
-        for(j=0;j<n;j++)
-        {
-            printf("%d\t",board[i][j]);
-        }
-        printf("\n");
+        printf("%d ",h->data);
+        h = h->next;
     }
 }
 int main()
 {
-    int length,breadth,mines;
-    scanf("%d %d %d",&length,&breadth,&mines);
-    generateAndPrintMinesweeperBoard(length,breadth,mines);
+    LLNode *head = NULL;
+    head = createSeriesList(10);
+    traversal(head);
     return 0;
 }
