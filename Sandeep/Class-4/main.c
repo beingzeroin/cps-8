@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 int factorial(int n)
 {
@@ -51,6 +52,7 @@ LLNode *insertInBegin(LLNode *h, int data)
 }
 void traverse(LLNode *h)
 {
+    printf("\nTRAVERSE: ");
     LLNode *c = h;
 
     while(c!=NULL)
@@ -82,6 +84,29 @@ LLNode *insertInEnd(LLNode *h, int data)
 	return h;
 }
 
+LLNode *deleteNodeWithValue(LLNode *h, int data)
+{
+    LLNode* c=h, *p=NULL;
+
+    while(c!=NULL)
+    {
+        if(c->data==data)
+        {
+            if(p==NULL)
+            {
+                c = c->next;
+                free(h);
+                return c;
+            }
+            p->next = c->next;
+            free(c);
+            return h;
+        }
+        p = c;
+        c = c->next;
+    }
+    return h;
+}
 /*
 LLNode *deleteNodeWithValue(LLNode *h, int data)
 {
@@ -131,22 +156,52 @@ LLNode *createSerialList(int n)
 
     return h;
 }
+int countLinkedListNodes(LLNode *h)
+{
+    int c = 0;
+
+    while(h!=NULL){
+        c++;
+        h = h->next;
+    }
+
+    return c;
+}
+
+LLNode *searchNodeWithValue(LLNode *h, int data)
+{
+
+}
+
+LLNode *findIntersectionPoint(LLNode *h1, LLNode *h2)
+{
+
+
+}
+
 int main()
 {
 
     LLNode *h = createSerialList(10);
+    traverse(h);
+    assert(countLinkedListNodes(h)==10);
 
     // 1st Node Deletion
+    assert(searchNodeWithValue(h, 1)!=NULL);
     h = deleteNodeWithValue(h, 1);
     traverse(h);
+    assert(countLinkedListNodes(h)==9);
+    assert(searchNodeWithValue(h, 1)==NULL);
 
     // Last Node
      h = deleteNodeWithValue(h, 10);
     traverse(h);
+    assert(countLinkedListNodes(h)==8);
 
     // Middle Node
      h = deleteNodeWithValue(h, 5);
     traverse(h);
+    assert(countLinkedListNodes(h)==7);
 
     // Empty Linked List
     deleteNodeWithValue(NULL, 7);
@@ -154,7 +209,7 @@ int main()
     // Data Not Found
      h = deleteNodeWithValue(h, 15);
     traverse(h);
-
+    assert(countLinkedListNodes(h)==7);
     //findLastNode(NULL);
 
     LLNode *head = NULL;

@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1450228618 source:c:\users\sandy\desktop\cps-8\sandeep\linkedlist-interviewquestions\interviewquestions.c
+	"LLNode.h"
+	<stdlib.h>
+	<stdbool.h>
+
+1450228631 c:\users\sandy\desktop\cps-8\sandeep\linkedlist-interviewquestions\llnode.h
+	<stdbool.h>
+
+1450227917 source:c:\users\sandy\desktop\cps-8\sandeep\linkedlist-interviewquestions\llnode.c
+	"LLNode.h"
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
+1450228471 source:c:\users\sandy\desktop\cps-8\sandeep\linkedlist-interviewquestions\main.c
+	"LLNode.h"
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
