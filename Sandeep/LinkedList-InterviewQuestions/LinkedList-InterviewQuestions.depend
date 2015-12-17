@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1450234169 source:c:\users\sandy\desktop\cps-8\sandeep\linkedlist-interviewquestions\interviewquestions.c
+	"LLNode.h"
+	<stdlib.h>
+	<stdbool.h>
+
+1450235229 c:\users\sandy\desktop\cps-8\sandeep\linkedlist-interviewquestions\llnode.h
+	<stdbool.h>
+
+1450235253 source:c:\users\sandy\desktop\cps-8\sandeep\linkedlist-interviewquestions\llnode.c
+	"LLNode.h"
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
+1450233014 source:c:\users\sandy\desktop\cps-8\sandeep\linkedlist-interviewquestions\main.c
+	"LLNode.h"
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
+1450235262 source:c:\users\sandy\desktop\cps-8\sandeep\linkedlist-interviewquestions\unittests.c
+	"LLNode.h"
+	<assert.h>
+	<stdlib.h>
+
+1450237711 source:c:\users\ejanthkar varun\documents\c -github\cps-8\sandeep\linkedlist-interviewquestions\interviewquestions.c
+	"LLNode.h"
+	<stdlib.h>
+	<stdbool.h>
+
+1450235579 c:\users\ejanthkar varun\documents\c -github\cps-8\sandeep\linkedlist-interviewquestions\llnode.h
+	<stdbool.h>
+
+1450235579 source:c:\users\ejanthkar varun\documents\c -github\cps-8\sandeep\linkedlist-interviewquestions\llnode.c
+	"LLNode.h"
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
+1450237493 source:c:\users\ejanthkar varun\documents\c -github\cps-8\sandeep\linkedlist-interviewquestions\main.c
+	"LLNode.h"
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
+1450235579 source:c:\users\ejanthkar varun\documents\c -github\cps-8\sandeep\linkedlist-interviewquestions\unittests.c
+	"LLNode.h"
+	<assert.h>
+	<stdlib.h>
+

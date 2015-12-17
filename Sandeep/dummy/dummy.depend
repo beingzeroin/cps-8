@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1450232299 source:c:\users\sandy\desktop\cps-8\sandeep\dummy\main.c
+	<stdio.h>
+	<stdlib.h>
+	"llnode.h"
+
+1450232363 c:\users\sandy\desktop\cps-8\sandeep\dummy\llnode.h
+
