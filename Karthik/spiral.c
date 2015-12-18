@@ -11,30 +11,30 @@ int main()
     int count=0;
     while(1)
     {
-        for(i=r1,j=c1;j<=c2;j++)
+        for(i=r1,j=c1;j<=c2-1;j++)
         {
-            printf("%d ",a[i][j]);
+            printf("% d",a[i][j]);
             count++;
         }
         if(count==m*n)
             break;
-        for(i=r1+1,j=c2;i<=r2-1;i++)
+        for(i=r1,j=c2;i<=r2-1;i++)
         {
-            printf("%d ",a[i][j]);
+            printf("% d",a[i][j]);
             count++;
         }
         if(count==m*n)
             break;
-        for(i=r2,j=c2;j>=c1;j--)
+        for(i=r2,j=c2;j>=c1+1;j--)
         {
-            printf("%d ",a[i][j]);
+            printf("% d",a[i][j]);
             count++;
         }
         if(count==m*n)
             break;
-        for(i=r2-1,j=c1;i>=r1+1;i--)
+        for(i=r2,j=c1;i>=r1+1;i--)
         {
-            printf("%d ",a[i][j]);
+            printf("% d",a[i][j]);
             count++;
         }
         if(count==m*n)
