@@ -16,15 +16,16 @@ int main()
     {
         for(j=1;j<=n;j++)
         {
+            if(c>=l)
+                break;
            k=rand()%2;
            a[i][j]=k;
            if(k==1)
             c++;
-           if(c==l)
-            break;
+
 
         }
-        if(c==l)
+        if(c>=l)
             break;
         //printf("%d ", rand());
     }
