@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1450407224 source:c:\users\sandy\desktop\cps-8\sandeep\class-8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
