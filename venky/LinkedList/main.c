@@ -32,5 +32,10 @@ int main()
     printf("\n\n");
 
     traverse(head);
+
+
+    head = reverseLinkedList(head);
+
+    traverse(head);
     return 0;
 }

@@ -17,7 +17,22 @@ LLNode *getKthNodeFromEnd(LLNode *h, int k)
 
 LLNode *reverseLinkedList(LLNode *h)
 {
-    return NULL;
+    // CODE
+    LLNode *c, *p, *n;
+
+    c = h;
+    p = NULL;
+    n = c->next;
+
+    while(c!=NULL )
+    {
+        n = c->next;
+        c->next=p;
+        p=c;
+        c=n;
+    }
+
+    return p;
 }
 LLNode *insertSorted(LLNode *h, int data)
 {
@@ -25,7 +40,24 @@ LLNode *insertSorted(LLNode *h, int data)
 }
 bool hasCycle(LLNode *h)
 {
-    return false;
+    LLNode *s,*f;
+    f=s=h;
+    if(h==NULL)
+        return false;
+    do{
+        if(f->next!=NULL)
+        {
+            f=f->next;
+            if(f->next!=NULL)
+                f=f->next;
+            else
+                return false;
+        }
+        else
+            return false;
+        s=s->next;
+    }while(f!=s);
+    return true;
 }
 LLNode *findMiddleNode(LLNode *h)
 {
