@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1449685760 source:c:\users\rahack\desktop\cps-8\venky\cps progs\3n+1.c
+	<stdio.h>
+	<stdlib.h>
+
+1449718153 source:c:\users\rahack\desktop\cps-8\venky\cps progs\main.c
+	<stdlib.h>
+
+1449717766 source:c:\users\rahack\desktop\cps-8\venky\cps progs\wordscramble.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1449687618 source:c:\users\rahack\desktop\cps-8\venky\cps progs\printcal.c
+	<stdio.h>
+	<stdlib.h>
+
+1449719652 source:c:\users\rahack\desktop\cps-8\venky\cps progs\minesweeper.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1449935042 source:c:\users\venkatesh\google drive\cps-8\venky\cps progs\3n+1.c
+	<stdio.h>
+	<stdlib.h>
+
+1450028071 source:c:\users\venkatesh\google drive\cps-8\venky\cps progs\main.c
+	<stdlib.h>
+
+1449935059 source:c:\users\venkatesh\google drive\cps-8\venky\cps progs\minesweeper.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1449935049 source:c:\users\venkatesh\google drive\cps-8\venky\cps progs\printcal.c
+	<stdio.h>
+	<stdlib.h>
+
+1450118923 source:c:\users\venkatesh\google drive\cps-8\venky\cps progs\romannumerals.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1450028071 source:c:\users\venkatesh\google drive\cps-8\venky\cps progs\tictactoe.c
+	<stdio.h>
+	<stdlib.h>
+
+1450024684 source:c:\users\venkatesh\google drive\cps-8\venky\cps progs\wordscramble.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

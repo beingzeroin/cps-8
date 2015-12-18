@@ -1,0 +1,132 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct n
+{
+    int data;
+    struct n *next;
+};
+
+typedef struct n Node;
+
+Node* createNode(int data1)
+{
+    Node *temp=malloc(sizeof(Node));
+    temp->data=data1;
+    temp->next=NULL;
+    return temp;
+}
+
+Node* insertAtBeg(Node* h,int data1)
+{
+    Node* temp=createNode(data1);
+    temp->next=h;
+    return temp;
+}
+void traverse(Node* h)
+{
+    while(h!=NULL)
+    {
+        printf("%d ",h->data);
+        h=h->next;
+    }
+}
+
+Node* insertAtEnd(Node* h,int data1)
+{
+    Node* temp=createNode(data1);
+    Node* store_head;
+    store_head=h;
+    if(h!=NULL)
+    {
+    while(h->next!=NULL)
+    {
+        h=h->next;
+    }
+ h->next=temp;
+    return store_head;
+    }
+    else
+        return temp;
+
+}
+
+Node* deleteNodeWithValue(Node* h,int data1)
+{
+    Node *prev,*cur;
+    cur=h;
+    prev=NULL;
+    int count=1;
+    if(h!=NULL)
+    {
+    while(cur!=NULL && cur->data!=data1)
+    {
+        prev=cur;
+        cur=cur->next;
+        count++;
+
+    }
+    if(cur!=NULL)
+    {
+        if(count!=1)
+        {
+    prev->next=cur->next;
+        }
+        else{
+        prev=cur->next;
+         h=prev;
+        }
+        free(cur);
+    }
+    }
+    return h;
+}
+
+Node* createSerialList(int n)
+{
+    int i;
+    Node* h=NULL;
+    for(i=1;i<=n;i++)
+        h=insertAtEnd(h,i);
+    return h;
+}
+
+int main()
+{
+    Node *head;
+    /*head=insertAtBeg(head,5);
+    head=insertAtBeg(head,4);
+    head=insertAtBeg(head,3);
+    head=insertAtBeg(head,2);
+    head=insertAtBeg(head,1);
+    head=insertAtEnd(head,6);
+    head=insertAtEnd(head,7);
+    head=insertAtEnd(head,8);
+    head=insertAtEnd(head,9);
+    head=insertAtEnd(head,10);*/
+    head=createSerialList(10);
+    traverse(head);
+printf("\n");
+   /* head=deleteNodeWithValue(head,5);
+    traverse(head);
+printf("\n");
+
+    head=deleteNodeWithValue(head,1);
+    traverse(head);
+printf("\n");
+head=deleteNodeWithValue(head,10);
+    traverse(head);
+printf("\n");
+
+
+    head=deleteNodeWithValue(NULL,15);
+    traverse(head);
+printf("\n");*/
+
+
+    head=deleteNodeWithValue(head,11);
+    traverse(head);
+    printf("\n");
+
+    return 0;
+}
