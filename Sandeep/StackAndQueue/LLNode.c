@@ -5,24 +5,38 @@
 
 LLNode* createLLNode(ElementType data)
 {
-    assert(false);
-    return NULL;
+    LLNode *t  = malloc(sizeof(LLNode));
+    t->next = NULL;
+    t->data = data;
+    return t;
 }
 
 LLNode* insertInBegin(LLNode *head, ElementType data)
 {
-    assert(false);
-    return NULL;
+    LLNode *t = createLLNode(data);
+    //if(head==NULL)
+    //  return t;
+    t->next = head;
+    return t;
 }
 
 LLNode* deleteFirstNode(LLNode *head)
 {
-    assert(false);
-    return NULL;
+    if(head==NULL)
+        return NULL;
+    LLNode *t = head->next;
+    free(head);
+    return t;
 }
 
 LLNode* destroyAllNodes(LLNode *head)
 {
-   assert(false);
-   return NULL;
+    LLNode *n;
+    while(head!=NULL)
+    {
+        n = head->next;
+        free(head);
+        head=n;
+    }
+    return NULL;
 }
