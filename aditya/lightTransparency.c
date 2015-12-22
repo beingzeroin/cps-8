@@ -16,7 +16,7 @@ typedef struct{
 void perform_swap(lines *);
 float* getXElements(lines *,int);
 float* sort_array(float *,int);
-float getTransparencyCoefficient(lines *,int,float,float,int);
+float getTransparencyCoefficient(lines *,int,float,float);
 
 int main()
 {
@@ -24,7 +24,7 @@ int main()
     char ch;
     scanf("%d",&t);
     while(t){
-        scanf("%c",&ch);
+        scanf("%c",&ch);/*Enter key*/
         int nl,np,i = 0;
         lines l[1000];
         scanf("%d",&nl);
@@ -37,15 +37,13 @@ int main()
         printf("%d\n",np);
         float *arr = getXElements(l,nl);
         i = 0;
-        while(i < np){
-            if((i-1) < 0)
-                printf("-inf %.3f %.3f\n",arr[i],getTransparencyCoefficient(l,nl,0,arr[i],MINUS_INF));
-            else if(i < (np-1))
-                printf("%.3f %.3f %.3f\n",arr[i-1],arr[i],getTransparencyCoefficient(l,nl,arr[i-1],arr[i],0));
-            else
-                printf("%.3f +inf %.3f",arr[i-1],getTransparencyCoefficient(l,nl,arr[i-1],0,PLUS_INF));
+        printf("-inf %.3f %.3f\n",arr[i],1.0);
+        i++;
+        while(i < (np-1)){
+            printf("%.3f %.3f %.3f\n",arr[i-1],arr[i],getTransparencyCoefficient(l,nl,arr[i-1],arr[i]));
             i++;
         }
+        printf("%.3f +inf %.3f",arr[i-1],1.0);
         if(t > 1)
             printf("\n\n");
         t--;
@@ -86,30 +84,13 @@ float* sort_array(float *a,int n){
     }
     return a;
 }
-float getTransparencyCoefficient(lines *l,int n,float lower,float higher,int flag){
+float getTransparencyCoefficient(lines *l,int n,float lower,float higher){
     int i = 0;
     float coefficient = 1.0;
-    if(flag == MINUS_INF){
-        while(i < n){
-            if(higher > l[i].x1)
-                coefficient *= l[i].r;
-            i++;
-        }
-    }
-    else if(flag == PLUS_INF){
-        while(i < n){
-            if(lower < l[i].x2)
-                coefficient *= l[i].r;
-            i++;
-        }
-    }
-    else{
-        while(i < n){
-            if(lower >= l[i].x1 && higher <= l[i].x2)
-                coefficient *= l[i].r;
-
-            i++;
-        }
+    while(i < n){
+        if(lower >= l[i].x1 && higher <= l[i].x2)
+            coefficient *= l[i].r;
+        i++;
     }
     return coefficient;
 }
