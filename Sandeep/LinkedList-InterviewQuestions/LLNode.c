@@ -26,7 +26,6 @@ LLNode *insertInBegin(LLNode *h, int data)
 }
 void traverse(LLNode *h)
 {
-    printf("\nTRAVERSE: ");
     LLNode *c = h;
 
     while(c!=NULL)
