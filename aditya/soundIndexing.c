@@ -1,85 +1,77 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
-char name[10000][100], codes[10000][100];
-int main()
-{
-    char ch;
-    int n = 0, i = 0, j = 0, ci = 0, cj = 0, flag = 0;
+
+void printCode(char*);
+int getFlagFromSwitchTable(char);
+
+int main(){
+    char ch, name[21];
+    int i = 0;
+    printf("%9sNAME%21sSOUNDEX CODE\n"," "," ");
     while((ch = getchar()) != EOF){
         if(ch == '\n'){
-            name[n][j] = '\0';
-            n++;
-            j = 0;
+            name[i] = '\0';
+            printCode(name);
+            i = 0;
         }
         else
-            name[n][j++] = ch;
+            name[i++] = ch;
     }
-    while(i <= n){
-        j = 0;cj = 0;
-        if(name[i][j] != '\0'){
-            codes[ci][cj++] = name[i][j];
-            if(name[i][j] == 'B' || name[i][j] == 'P' || name[i][j] == 'F' || name[i][j] == 'V')
-                flag = 1;
-            else if(name[i][j] == 'C' || name[i][j] == 'S' || name[i][j] == 'K' || name[i][j] == 'G' || name[i][j] == 'J' || name[i][j] == 'Q' || name[i][j] == 'X' || name[i][j] == 'Z')
-                flag = 2;
-            else if(name[i][j] == 'D' || name[i][j] == 'T')
-                flag = 3;
-            else if(name[i][j] == 'L')
-                flag = 4;
-            else if(name[i][j] == 'M' || name[i][j] == 'N')
-                flag = 5;
-            else if(name[i][j] == 'R')
-                flag = 6;
-            else if(name[i][j] == 'A' || name[i][j] == 'E' || name[i][j] == 'I' || name[i][j] == 'O' || name[i][j] == 'U' || name[i][j] == 'Y' || name[i][j] == 'W' || name[i][j] == 'H')
-                flag = 7;
-            j++;
-        }
-        while(name[i][j] != '\0'){
-            if(cj > 3)
-                break;
-            if(flag != 1 && (name[i][j] == 'B' || name[i][j] == 'P' || name[i][j] == 'F' || name[i][j] == 'V')){
-                codes[ci][cj++] = '1';
-                flag = 1;
-            }
-            else if(flag != 2 && (name[i][j] == 'C' || name[i][j] == 'S' || name[i][j] == 'K' || name[i][j] == 'G' || name[i][j] == 'J' || name[i][j] == 'Q' || name[i][j] == 'X' || name[i][j] == 'Z')){
-                codes[ci][cj++] = '2';
-                flag = 2;
-            }
-            else if(flag != 3 && (name[i][j] == 'D' || name[i][j] == 'T')){
-                codes[ci][cj++] = '3';
-                flag = 3;
-            }
-            else if(flag != 4 && (name[i][j] == 'L')){
-                codes[ci][cj++] = '4';
-                flag = 4;
-            }
-            else if(flag != 5 && (name[i][j] == 'M' || name[i][j] == 'N')){
-                codes[ci][cj++] = '5';
-                flag = 5;
-            }
-            else if(flag != 6 && (name[i][j] == 'R')){
-                codes[ci][cj++] = '6';
-                flag = 6;
-            }
-            else if(flag != 7 && (name[i][j] == 'A' || name[i][j] == 'E' || name[i][j] == 'I' || name[i][j] == 'O' || name[i][j] == 'U' || name[i][j] == 'Y' || name[i][j] == 'W' || name[i][j] == 'H')){
-                flag = 7;
-            }
-            j++;
-        }
-        while(cj <= 3)
-            codes[ci][cj++] = '0';
-        codes[ci][cj] = '\0';
-        i++;ci++;
-        flag = 0;
-    }
-    printf("%9sNAME%21sSOUNDEX CODE\n"," "," ");
-    i = 0;
-    while(i <= n){
-        printf("%9s%s"," ",name[i]);
-        int padding = 25 - strlen(name[i]);
-        printf("%*s%s\n",padding," ",codes[i]);
-        i++;
-    }
+    /*if(name[i-1] == '\n')
+        name[i-1] = '\0';
+    else if(name[i-2] == '\n')
+        name[i-2] = '\0';
+    else
+        name[i] = '\0';*/
+    name[i] = '\0';
+    printCode(name);
     printf("%19sEND OF OUTPUT"," ");
     return 0;
+}
+
+void printCode(char *s){
+    char code[5];
+    int i = 0, j = 0, curr_flag, prev_flag, padding;
+    prev_flag = getFlagFromSwitchTable(s[i]);
+    code[j++] = s[i++];
+    while(s[i] != '\0' && j < 4){
+        curr_flag = getFlagFromSwitchTable(s[i]);
+        if((curr_flag != prev_flag) && curr_flag != 0)
+            code[j++] = (char)curr_flag + '0';
+        prev_flag = curr_flag;
+        i++;
+    }
+    while(j < 4)
+        code[j++] = '0';
+    code[j] = '\0';
+    printf("%9s%s"," ",s);
+    padding = 25 - strlen(s);
+    printf("%*s%s\n",padding," ",code);
+}
+int getFlagFromSwitchTable(char ch){
+    int flag;
+    switch(ch){
+            case 'A' : case 'E' :
+            case 'I' : case 'O' :
+            case 'U' : case 'Y' :
+            case 'W' : case 'H' : flag = 0;break;
+
+            case 'B' : case 'P' :
+            case 'F' : case 'V' : flag = 1;break;
+
+            case 'C' : case 'S' :
+            case 'K' : case 'G' :
+            case 'J' : case 'Q' :
+            case 'X' : case 'Z' : flag = 2;break;
+
+            case 'D' : case 'T' : flag = 3;break;
+
+            case 'L' : flag = 4;break;
+
+            case 'M' : case 'N' : flag = 5;break;
+
+            case 'R' : flag = 6;break;
+    }
+    return flag;
 }
