@@ -33,7 +33,7 @@ LLNode *getKthNodeFromEnd(LLNode *h, int k)
 
 LLNode *reverseLinkedList(LLNode *h)
 {
-    return NULL;
+
 }
 LLNode *insertSorted(LLNode *h, int data)
 {
