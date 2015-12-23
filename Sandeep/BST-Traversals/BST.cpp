@@ -54,6 +54,15 @@ BSTNode *insertBSTNode(BSTNode *root, ElementType data)
     }
 }
 
+BSTNode *createRandomBST(int nodeCount, int maxVal)
+{
+    int i;
+    BSTNode *r = NULL;
+    for(i=0;i<=nodeCount;i++)
+        r = insertBSTNode(r, rand()%maxVal);
+    return r;
+}
+
 ElementType min(BSTNode *n)
 {
     while(n->left!=NULL)

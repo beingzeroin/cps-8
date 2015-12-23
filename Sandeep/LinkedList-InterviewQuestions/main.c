@@ -58,7 +58,7 @@ int main()
     h=reverseLinkedList(h);
     traverse(h);
 >>>>>>> f32f847bdaedc490da3af20f218f3ddacad191e1
-=======
+==========
     LLNode *h = NULL;
     int n, v;
     scanf("%d", &n);

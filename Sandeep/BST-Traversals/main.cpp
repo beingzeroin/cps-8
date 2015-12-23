@@ -19,7 +19,7 @@ int main()
     print_ascii_tree(root);
 
     // Delete Root
-    root = rdeleteBSTNode(root, 5);
+   /* root = rdeleteBSTNode(root, 5);
     print_ascii_tree(root);
     root = rdeleteBSTNode(root, 7);
     print_ascii_tree(root);
@@ -28,6 +28,13 @@ int main()
     root = rdeleteBSTNode(root, 100);
 
     print_ascii_tree(root);
+*/
+    iterativePreOrder(root);
+    printf("\n");
+    iterativeInOrder(root);
+    printf("\n");
+    iterativePostOrder(root);
+
 
     return 0;
 }
