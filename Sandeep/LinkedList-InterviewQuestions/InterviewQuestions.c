@@ -17,6 +17,25 @@ LLNode *getKthNodeFromEnd(LLNode *h, int k)
 
 LLNode *reverseLinkedList(LLNode *h)
 {
+<<<<<<< HEAD
+
+    LLNode *c,*p,*n;
+    if(h==NULL || h->next==NULL)
+        return h;
+    c=h;
+    p=NULL;
+    n=h->next;
+    while(c!=NULL)
+    {
+
+        c->next=p;
+        p=c;
+        c=c->next;
+        if(n==NULL)
+            break;
+        n=c->next;
+    }
+=======
     // CODE
     LLNode *c, *p, *n;
 
@@ -32,6 +51,7 @@ LLNode *reverseLinkedList(LLNode *h)
         c=n;
     }
 
+>>>>>>> f32f847bdaedc490da3af20f218f3ddacad191e1
     return p;
 }
 LLNode *insertSorted(LLNode *h, int data)

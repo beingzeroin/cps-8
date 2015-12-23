@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1450668257 source:c:\users\arra\desktop\cps-8\aravind\recursion\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
