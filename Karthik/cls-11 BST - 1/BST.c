@@ -64,9 +64,9 @@ BSTNode *delteBSTNode(BSTNode *root, ElementType data)
         return root;
     if(data<root->data)
         root->left=delteBSTNode(root->left,data);
-    if(data>root->data)
+    else if(data>root->data)
         root->right=delteBSTNode(root->right,data);
-    if(data==root->data)
+    else if(data==root->data)
     {
         if(root->left==NULL && root->right!=NULL)
         {
@@ -82,29 +82,18 @@ BSTNode *delteBSTNode(BSTNode *root, ElementType data)
             free(root);
             return temp;
         }
-        else
+        else if(root->left!=NULL)
         {
-            if(root->left!=NULL)
-            {
-                BSTNode *temp=root->left;
-                while(temp->right!=NULL)
-                    temp=temp->right;
-                root->data=temp->data;
-                return delteBSTNode(root->left,temp->data);
-            }
-            else if(root->right!=NULL)
-            {
-                BSTNode *temp=root->right;
-                while(temp->left!=NULL)
-                    temp=temp->left;
-                root->data=temp->data;
-                return delteBSTNode(root->right,temp->data);
-            }
-            else if(root->right==NULL && root->left==NULL)
-            {
-                free(root);
-                return NULL;
-            }
+            BSTNode *temp=root->left;
+            while(temp->right!=NULL)
+                temp=temp->right;
+            root->data=temp->data;
+            return delteBSTNode(root->left,temp->data);
+        }
+        else if(root->right==NULL && root->left==NULL)
+        {
+            free(root);
+            return NULL;
         }
     }
     return root;
