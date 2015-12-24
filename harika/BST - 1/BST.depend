@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1450921862 source:c:\users\gauti's\desktop\cps-8\harika\bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450885397 c:\users\gauti's\desktop\cps-8\harika\bst - 1\bst.h
+
+1450886809 source:c:\users\gauti's\desktop\cps-8\harika\bst - 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1450879842 source:c:\users\gauti's\desktop\cps-8\harika\bst - 1\printbinarytree.c
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1450924904 source:c:\users\sandy\desktop\cps-8\harika\bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450923178 c:\users\sandy\desktop\cps-8\harika\bst - 1\bst.h
+
+1450923178 source:c:\users\sandy\desktop\cps-8\harika\bst - 1\printbinarytree.c
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1450924300 source:c:\users\sandy\desktop\cps-8\harika\bst - 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+

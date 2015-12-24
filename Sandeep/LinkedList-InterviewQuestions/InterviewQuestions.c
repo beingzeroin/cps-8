@@ -51,8 +51,14 @@ LLNode *reverseLinkedList(LLNode *h)
         c=n;
     }
 
+<<<<<<< HEAD
+LLNode *reverseLinkedList(LLNode *h)
+{
+
+=======
 >>>>>>> f32f847bdaedc490da3af20f218f3ddacad191e1
     return p;
+>>>>>>> 00d6df4058f28121513b4bd11a320bbf6faa8cfe
 }
 LLNode *insertSorted(LLNode *h, int data)
 {

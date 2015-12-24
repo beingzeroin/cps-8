@@ -3,12 +3,16 @@
 
 BSTNode *createBSTNode(ElementType data)
 {
+<<<<<<< HEAD
     BSTNode *t=malloc(sizeof(BSTNode));
     t->data=data;
     t->left=NULL;
     t->right=NULL;
 
     return t;
+=======
+    return NULL;
+>>>>>>> fe043da394043d1e9fd8d5058ed0e4e03257dc63
 }
 
 BSTNode *rinsertBSTNode(BSTNode *root, ElementType data)

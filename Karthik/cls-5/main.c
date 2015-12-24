@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "LLNode.h"
 typedef struct n LLNode;
 struct n
 {
