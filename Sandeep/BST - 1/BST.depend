@@ -1,13 +1,31 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1450838450 source:c:\users\ravichandra\cps-8\sandeep\bst - 1\printbinarytree.c
+=======
+1450838535 source:c:\users\dell 15\cps-8\sandeep\bst - 1\printbinarytree.c
+>>>>>>> cc18206aa627d8a76700b20568b8271e4b17958e
 	"BST.h"
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
 
+<<<<<<< HEAD
 1450838450 c:\users\ravichandra\cps-8\sandeep\bst - 1\bst.h
 
 1450924388 source:c:\users\ravichandra\cps-8\sandeep\bst - 1\bst.c
 	"BST.h"
 	<stdlib.h>
 
+=======
+1450838535 c:\users\dell 15\cps-8\sandeep\bst - 1\bst.h
+
+1450925500 source:c:\users\dell 15\cps-8\sandeep\bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450925375 source:c:\users\dell 15\cps-8\sandeep\bst - 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+
+>>>>>>> cc18206aa627d8a76700b20568b8271e4b17958e

@@ -19,7 +19,7 @@ int unitTests()
     print_ascii_tree(root);
 
     // Delete Root
-    root = rdeleteBSTNode(root, 5);
+   /* root = rdeleteBSTNode(root, 5);
     print_ascii_tree(root);
     root = rdeleteBSTNode(root, 7);
     print_ascii_tree(root);
@@ -27,13 +27,15 @@ int unitTests()
     print_ascii_tree(root);
     root = rdeleteBSTNode(root, 100);
 
-    print_ascii_tree(root);
+    print_ascii_tree(root);*/
+    iterativePreorder(root);
+    printf("\nAfter preorder");
 
     return 0;
 }
 
 int main()
 {
-
+   int i= unitTests();
     return 0;
 }
