@@ -18,4 +18,7 @@ BSTNode *deleteBSTNode(BSTNode *root, ElementType data);
 BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data);
 void print_ascii_tree(BSTNode * t);
 
+void iterativePreorder(BSTNode *r);
+void recursivPreorder(BSTNode *r);
+
 #endif // BST_H_INCLUDED

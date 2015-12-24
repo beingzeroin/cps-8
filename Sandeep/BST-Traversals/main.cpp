@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <cstdlib>
 #include "BST.h"
 #include<assert.h>
 
-int main()
+int unitTests()
 {
     BSTNode *root = NULL;
     root = insertBSTNode(root, 5);
@@ -28,6 +28,12 @@ int main()
     root = rdeleteBSTNode(root, 100);
 
     print_ascii_tree(root);
+
+    return 0;
+}
+
+int main()
+{
 
     return 0;
 }
