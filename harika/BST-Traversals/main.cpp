@@ -5,9 +5,7 @@
 
 int unitTests()
 {
-    BSTNode *root = createRandomBST(10,100);
-    print_ascii_tree(root);
-    iterativePreorder(root);
+
     /*root = insertBSTNode(root, 5);
     root = insertBSTNode(root, 3);
     root = insertBSTNode(root, 1);
@@ -29,13 +27,17 @@ int unitTests()
     print_ascii_tree(root);
     root = rdeleteBSTNode(root, 100);*/
 
-    print_ascii_tree(root);
 
     return 0;
 }
 
 int main()
 {
+    BSTNode *root = createRandomBST(10,100);
+    print_ascii_tree(root);
+    iterativePreorder(root);
+    //iterativeInorder(root);
+
 
     return 0;
 }

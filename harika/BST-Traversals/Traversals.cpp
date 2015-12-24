@@ -47,7 +47,7 @@ void iterativePreorder(BSTNode *root)
     {
         while(root!=NULL)
         {
-            printf("%d",root->data);
+            printf("%d \t",root->data);
             mystack.push(root);
             root=root->left;
         }
@@ -58,7 +58,7 @@ void iterativePreorder(BSTNode *root)
         root=root->right;
         while(root!=NULL)
         {
-            printf("%d",root->data);
+            printf("%d \t",root->data);
             root=root->right;
         }
         if(mystack.empty())
