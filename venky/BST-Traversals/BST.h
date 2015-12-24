@@ -21,5 +21,7 @@ void print_ascii_tree(BSTNode * t);
 void iterativeInorder(BSTNode *r);
 void recursivPreorder(BSTNode *r);
 void iterativePreorder(BSTNode *r);
+void iterativePostorder(BSTNode *r);
+
 
 #endif // BST_H_INCLUDED

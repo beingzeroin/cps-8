@@ -20,6 +20,8 @@ int main()
     iterativeInorder(root);
     printf("\n");
     iterativePreorder(root);
+    printf("\n");
+    iterativePostorder(root);
     // Delete Root
    /* root = rdeleteBSTNode(root, 5);
     print_ascii_tree(root);
