@@ -56,45 +56,41 @@ BSTNode *insertBSTNode(BSTNode *root, ElementType data)
 
 BSTNode *deleteBSTNode(BSTNode *root, ElementType data)
 {
-    BSTNode *temp=(BSTNode*)malloc(sizeof(BSTNode));
-    temp=root;
-    BSTNode *c=(BSTNode*)malloc(sizeof(BSTNode));
-    c=root;
-    if(temp==NULL)
-        return temp;
-    else if(data<temp->data)
-        return deleteBSTNode(root->left,data);
-    else if(data>temp->data)
-        return deleteBSTNode(root->right,data);
+    BSTNode *c;
+    //BSTNode *temp=root;
+    if(root==NULL)
+        return root;
+    else if(data<root->data)
+        root->left = deleteBSTNode(root->left,data);
+    else if(data>root->data)
+        root->right = deleteBSTNode(root->right,data);
     else
-        if(temp->left==NULL)//one right child
+    {
+        if(root->left==NULL)//one right child
         {
             c=root->right;
-            free(temp);
+            free(root);
             return c;
         }
-        else if(temp->right==NULL)//one left child
+        else if(root->right==NULL)//one left child
         {
             c=root->left;
-            free(temp);
+            free(root);
             return c;
         }
         else                    //two children
         {
-            c=temp->right;      //right subtree
+            c=root->right;      //right subtree
             while(c->left!=NULL)
                 c=c->left;
-            temp->data=c->data;
-            free(temp);
-            return c;
-            /*
-            c=temp->left;       //left subtree
-            while(c->right!=NULL)
-                c=c->right;
-            temp->data=c->data;
-            free(temp);
-            */
+            root->data=c->data;
+
+            // Delete c->data
+            root->right = deleteBSTNode(root->right, c->data);
         }
+    }
+
+        return root;
 }
 
 BSTNode *searchBSTNode(BSTNode *root, ElementType data)
