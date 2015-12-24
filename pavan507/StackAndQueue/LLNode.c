@@ -19,7 +19,45 @@ LLNode* insertInBegin(LLNode *head, ElementType data)
     t->next = head;
     return t;
 }
+LLNode *insertInEnd(LLNode *head,ElementType data)
+{
+    LLNode *newNode=createLLNode(data);
+    LLNode *temp=head;
+    if(head==NULL)
+    return newNode;
+    while(temp->next!=NULL)
+    {
 
+        temp=temp->next;
+    }
+    temp->next=newNode;
+
+
+    return head;
+}
+LLNode* deleteLastNode(LLNode *head)
+{
+    if(head==NULL)
+        return head;
+    LLNode* temp1=head;
+    if(temp1->next==NULL)
+    {
+
+
+        free(head);
+    return NULL;
+    }
+    LLNode* temp2=head->next;
+    while(temp2->next!=NULL)
+    {
+        temp2=temp2->next;
+        temp1=temp1->next;
+
+    }
+    return temp1;
+
+
+}
 LLNode* deleteFirstNode(LLNode *head)
 {
     if(head==NULL)
