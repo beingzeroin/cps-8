@@ -9,6 +9,15 @@ BSTNode *createBSTNode(ElementType data)
     temp->right=NULL;
     return temp;
 }
+BSTNode *createRandomBST(int nodeCount,int maxVal)
+{
+    int i;
+    BSTNode *r=NULL;
+    for(i=1;i<=nodeCount;i++)
+        r=insertBSTNode(r,rand()%maxVal);
+    return r;
+
+}
 
 BSTNode *rinsertBSTNode(BSTNode *root, ElementType data)
 {
@@ -52,6 +61,56 @@ BSTNode *insertBSTNode(BSTNode *root, ElementType data)
         }
 
     }
+}
+
+ElementType min(BSTNode *n)
+{
+    while(n->left!=NULL)
+        n=n->left;
+    /*if(n->left==NULL)
+        return n->data;
+    else
+        n=n->left;*/
+     return n->data;
+
+}
+
+BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data)
+{
+    if(root==NULL)
+        return root;
+
+    if(root->data==data)
+    {
+        // 1. leaf node
+        if(root->left==NULL && root->right==NULL)
+        {
+            free(root);
+            return NULL;
+        }
+
+        //2. left or right child
+        else if(root->left==NULL || root->right==NULL)
+        {
+            if(root->left==NULL)
+                return root->right;
+            else if(root->right==NULL)
+                return root->left;
+        }
+
+        //3. has both children
+        else
+        {
+            root->data=min(root->right);
+            root->right=rdeleteBSTNode(root->right,root->data);
+
+        }
+    }
+    else if(data < root->data)
+        root->left=rdeleteBSTNode(root->left,data);
+    else
+        root->right=rdeleteBSTNode(root->right,data);
+    return root;
 }
 
 BSTNode *deleteBSTNode(BSTNode *root, ElementType data)
