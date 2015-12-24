@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1450925413 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450926365 c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.h
+
+1450925413 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.cpp
+	"BST.h"
+	<stdlib.h>
+
+1450926184 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+

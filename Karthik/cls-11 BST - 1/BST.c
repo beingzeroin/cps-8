@@ -3,14 +3,10 @@
 
 BSTNode *createBSTNode(ElementType data)
 {
-<<<<<<< HEAD
     BSTNode *newNode=malloc(sizeof(BSTNode));
     newNode->data=data;
     newNode->left=newNode->right=NULL;
     return newNode;
-=======
-    return NULL;
->>>>>>> a7e39fa389f29ca80e4f80145d2b79261ecf40bd
 }
 
 BSTNode *searchBSTNode(BSTNode *root,ElementType data)
