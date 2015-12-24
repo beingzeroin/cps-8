@@ -34,6 +34,10 @@ int unitTests()
 
 int main()
 {
-
+    BSTNode *r = createRandomBST(11, 100);
+    print_ascii_tree(r);
+    //iterativePreorder(r);
+    //iterativeInorder(r);
+    iterativePostrder(r);
     return 0;
 }

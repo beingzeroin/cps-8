@@ -11,6 +11,7 @@ struct bstNode
 };
 
 BSTNode *createBSTNode(ElementType data);
+BSTNode *createRandomBST(int nodeCount, int maxVal);
 BSTNode *insertBSTNode(BSTNode *root, ElementType data);
 BSTNode *rinsertBSTNode(BSTNode *root, ElementType data);
 BSTNode *searchBSTNode(BSTNode *root, ElementType data);
@@ -20,5 +21,7 @@ void print_ascii_tree(BSTNode * t);
 
 void iterativePreorder(BSTNode *r);
 void recursivPreorder(BSTNode *r);
+void iterativeInorder(BSTNode *r);
+void iterativePostrder(BSTNode *r);
 
 #endif // BST_H_INCLUDED
