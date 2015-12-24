@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1450838450 source:c:\users\ravichandra\cps-8\sandeep\bst - 1\printbinarytree.c
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1450838450 c:\users\ravichandra\cps-8\sandeep\bst - 1\bst.h
+
+1450924388 source:c:\users\ravichandra\cps-8\sandeep\bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
