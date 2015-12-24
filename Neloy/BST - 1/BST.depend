@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1450842799 source:c:\users\neloy\desktop\tp\beingzero cps\day11 _ 23-12-2015\bst - 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+
+1450838438 c:\users\neloy\desktop\tp\beingzero cps\day11 _ 23-12-2015\bst - 1\bst.h
+
+1450838438 source:c:\users\neloy\desktop\tp\beingzero cps\day11 _ 23-12-2015\bst - 1\printbinarytree.c
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1450843410 source:c:\users\neloy\desktop\tp\beingzero cps\day11 _ 23-12-2015\bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
