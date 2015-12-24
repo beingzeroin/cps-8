@@ -32,11 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="BST.cpp" />
-		<Unit filename="BST.h" />
-		<Unit filename="bstTraversals.cpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="printBinaryTree.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

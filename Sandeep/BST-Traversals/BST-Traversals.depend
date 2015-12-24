@@ -15,15 +15,43 @@
 	"BST.h"
 	<assert.h>
 
+<<<<<<< HEAD
+1450926436 source:c:\users\welcome\desktop\cps-8\sandeep\bst-traversals\bst.cpp
+	"BST.h"
+	<stdlib.h>
+
+1450929009 c:\users\welcome\desktop\cps-8\sandeep\bst-traversals\bst.h
+
+1450926436 source:c:\users\welcome\desktop\cps-8\sandeep\bst-traversals\printbinarytree.cpp
+=======
 1450926393 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\printbinarytree.cpp
+>>>>>>> fe043da394043d1e9fd8d5058ed0e4e03257dc63
 	"BST.h"
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
 
+<<<<<<< HEAD
 1450929788 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\traversals.cpp
 	<stack>
 	"BST.h"
 	<cstdlib>
 	<cstdio>
 
+=======
+<<<<<<< HEAD
+1450928219 source:c:\users\welcome\desktop\cps-8\sandeep\bst-traversals\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1450927928 source:c:\users\welcome\desktop\cps-8\sandeep\bst-traversals\bsttraversals.cpp
+	<stack>
+	<stdlib.h>
+	<stdio.h>
+	"BST.h"
+
+=======
+>>>>>>> fe043da394043d1e9fd8d5058ed0e4e03257dc63
+>>>>>>> 976743db0544a685597f1a1cf5ec5b09fd15ee2e

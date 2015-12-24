@@ -14,10 +14,19 @@ int main()
     root = insertBSTNode(root, 6);
     root = insertBSTNode(root, 9);
 
+        print_ascii_tree(root);
+    printf("\n%d",root->data);
+   // root = rinsertBSTNode(root, 10);
+    printf("\n%d",root->data);
     print_ascii_tree(root);
-
+    BSTNode *t=searchBSTNode(root,5);
+    if(t==NULL)
+        printf("\n data not found");
+    else
+        printf("\n data found is %d",t->data);
     // Delete Root
     root = delteBSTNode(root, 5);
+    printf("\nAfter deletion");
 
     print_ascii_tree(root);
 
