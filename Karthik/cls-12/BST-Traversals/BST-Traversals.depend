@@ -38,3 +38,26 @@
 	<iostream>
 	"BST.h"
 
+1450882752 source:e:\cps-8\karthik\cls-12\bst-traversals\bst.cpp
+	"BST.h"
+	<stdlib.h>
+
+1450882754 e:\cps-8\karthik\cls-12\bst-traversals\bst.h
+
+1450966644 source:e:\cps-8\karthik\cls-12\bst-traversals\main.cpp
+	<cstdlib>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1450882758 source:e:\cps-8\karthik\cls-12\bst-traversals\printbinarytree.cpp
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1450966686 source:e:\cps-8\karthik\cls-12\bst-traversals\reaversals.cpp
+	<stack>
+	<iostream>
+	"BST.h"
+

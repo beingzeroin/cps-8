@@ -17,7 +17,7 @@ int main()
     print_ascii_tree(root);
 
     // Delete Root
-    root = delteBSTNode(root, 5);
+    root = delteBSTNode2(root, 1);
 
     print_ascii_tree(root);
 

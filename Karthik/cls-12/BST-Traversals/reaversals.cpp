@@ -52,21 +52,38 @@ void iterativeInorder(BSTNode *root)
 void iterativePostorder(BSTNode *root)
 {
     stack<BSTNode*> mystack;
+    BSTNode *r,*rc;
     while(1)
     {
         while(root!=NULL)
         {
+            if(root->right!=NULL)
+                mystack.push(root->right);
             mystack.push(root);
             root=root->left;
         }
         if(mystack.empty())
             break;
-        root=mystack.top();
+        r=mystack.top();
         mystack.pop();
-        cout<<root->data<<" ";
-        root=mystack.top();
+        if(mystack.empty())
+        {
+            cout<<r->data<<" ";
+            break;
+        }
+        rc=mystack.top();
         mystack.pop();
-        cout<<root->data<<" ";
-        root
+        if(r->right==rc)
+        {
+            mystack.push(r);
+            root=rc;
+        }
+        else
+        {
+            cout<<r->data<<" ";
+            mystack.push(rc);
+            r=NULL;
+        }
+        //root=root->right;
     }
 }
