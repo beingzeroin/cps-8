@@ -14,9 +14,7 @@ BSTNode *createBSTNode(ElementType data);
 BSTNode *insertBSTNode(BSTNode *root, ElementType data);
 BSTNode *rinsertBSTNode(BSTNode *root, ElementType data);
 BSTNode *searchBSTNode(BSTNode *root, ElementType data);
-BSTNode *deleteBSTNode(BSTNode *root, ElementType data);
-BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data);
-void print_ascii_tree(BSTNode * t);
-void iterativePreorder(BSTNode *r);
-void iterativeInorder(BSTNode *r)
+BSTNode *delteBSTNode(BSTNode *root, ElementType data);
+BSTNode *createRandomTree(BSTNode *root,int n);
+
 #endif // BST_H_INCLUDED
