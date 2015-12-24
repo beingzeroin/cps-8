@@ -3,7 +3,7 @@
 
 BSTNode *createBSTNode(ElementType data)
 {
-   return NULL;
+    return NULL;
 }
 
 BSTNode *rinsertBSTNode(BSTNode *root, ElementType data)
