@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct n LLNode;
+struct n
+{
+    int data;
+    LLNode *next;
+};
+LLNode *alternateMerge(LLNode *h1, LLNode *h2)
+{
+	if(h1!=NULL && h2!=NULL)
+	{
+	    LLNode *temp=h2->next;
+	    h2->next=h1->next;
+	    h1->next=h2;
+	    h2->next=alternateMerge(h2->next,temp);
+	    return h1;
+	}
+	if(h1==NULL)
+	    return h2;
+	if(h1!=NULL)
+	    return h1;
+	return NULL;
+}

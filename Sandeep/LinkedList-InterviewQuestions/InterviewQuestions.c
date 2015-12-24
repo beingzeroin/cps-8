@@ -11,29 +11,54 @@ LLNode *findIntersectionPoint(LLNode *h1, LLNode *h2)
 
 LLNode *getKthNodeFromEnd(LLNode *h, int k)
 {
-    int i;
-    LLNode *f=h,*s=h;
-   //if(h==NULL)
-    //return NULL;
-    for(i=1;i<k;i++)
-    {
-        f=f->next;
-        if(f==NULL)
-           return NULL;
-    }
-
-    while(f->next!=NULL)
-    {
-        f=f->next;
-        s=s->next;
-    }
-// TODO:  Implement this Function
-    return s;
+    // TODO:  Implement this Function
+    return NULL;
 }
 
 LLNode *reverseLinkedList(LLNode *h)
 {
+<<<<<<< HEAD
 
+    LLNode *c,*p,*n;
+    if(h==NULL || h->next==NULL)
+        return h;
+    c=h;
+    p=NULL;
+    n=h->next;
+    while(c!=NULL)
+    {
+
+        c->next=p;
+        p=c;
+        c=c->next;
+        if(n==NULL)
+            break;
+        n=c->next;
+    }
+=======
+    // CODE
+    LLNode *c, *p, *n;
+
+    c = h;
+    p = NULL;
+    n = c->next;
+
+    while(c!=NULL )
+    {
+        n = c->next;
+        c->next=p;
+        p=c;
+        c=n;
+    }
+
+<<<<<<< HEAD
+LLNode *reverseLinkedList(LLNode *h)
+{
+
+=======
+>>>>>>> f32f847bdaedc490da3af20f218f3ddacad191e1
+    return p;
+>>>>>>> 00d6df4058f28121513b4bd11a320bbf6faa8cfe
 }
 LLNode *insertSorted(LLNode *h, int data)
 {
@@ -41,9 +66,26 @@ LLNode *insertSorted(LLNode *h, int data)
 }
 bool hasCycle(LLNode *h)
 {
-    return false;
+    LLNode *s,*f;
+    f=s=h;
+    if(h==NULL)
+        return false;
+    do{
+        if(f->next!=NULL)
+        {
+            f=f->next;
+            if(f->next!=NULL)
+                f=f->next;
+            else
+                return false;
+        }
+        else
+            return false;
+        s=s->next;
+    }while(f!=s);
+    return true;
 }
-LLNode *findMiddleNode(LLNode *h)//
+LLNode *findMiddleNode(LLNode *h)
 {
     return NULL;
 }

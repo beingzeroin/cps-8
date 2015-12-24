@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(int argc,char* argv[])
+{
+    FILE *fp=fopen(argv[1],"r");
+    int no_rows,no_columns,i,j,matrix[200][200],test_cases,k=0;
+    /*printf("\nEnter the no of rows and columns\n");
+    scanf("%d %d",&no_rows,&no_columns);
+    printf("\nEnter the matrix:\n");
+    for(i=0;i<no_rows;i++)
+    {
+        for(j=0;j<no_columns;j++)
+        {
+           scanf("%d",&matrix[i][j]);
+        }
+    }*/
+    fscanf(fp,"%d",test_cases);
+
+   // printf("\n%d %d",no_rows,no_columns);
+   while(!feof(fp))
+    {
+    fscanf(fp,"%d",&no_rows);
+    fscanf(fp,"%d",&no_columns);
+        for(i=0;i<no_rows;i++)
+        for(j=0;j<no_columns;j++)
+        fscanf(fp,"%d",&matrix[i][j]);
+int top=0,bottom=no_rows-1,left=0,right=no_columns-1,dir=0;
+printf("\nTest case:%d--->",k+1);
+    while(top<=bottom && left<=right)
+    {
+
+        if(dir==0)
+        {
+            for(i=left;i<=right;i++)
+                printf(" %d ",matrix[top][i]);
+            top++;
+        }
+        else if(dir==1)
+        {
+            for(i=top;i<=bottom;i++)
+                printf(" %d ",matrix[i][right]);
+            right--;
+        }
+        else if(dir==2)
+        {
+            for(i=right;i>=left;i--)
+                printf(" %d ",matrix[bottom][i]);
+            bottom--;
+        }
+        else{
+
+            for(i=bottom;i>=top;i--)
+                printf(" %d ",matrix[i][left]);
+            left++;
+        }
+        dir++;
+        dir=dir%4;
+    }
+    k++;
+    }
+    return 0;
+}
