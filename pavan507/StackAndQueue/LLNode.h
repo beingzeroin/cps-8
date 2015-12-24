@@ -15,5 +15,7 @@ LLNode* createLLNode(ElementType data);
 LLNode* insertInBegin(LLNode *head, ElementType data);
 LLNode* deleteFirstNode(LLNode *head);
 LLNode* destroyAllNodes(LLNode *head);
+LLNode* insertInEnd(LLNode *head,ElementType data);
+LLNode* deleteLastNode(LLNode *head);
 
 #endif // LLNode_H_INCLUDED

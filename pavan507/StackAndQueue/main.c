@@ -73,8 +73,8 @@ void queueUnitTests()
 
 void runUnitTests()
 {
-    stackUnitTests();
-    //queueUnitTests();
+    //stackUnitTests();
+    queueUnitTests();
 }
 
 int main()
