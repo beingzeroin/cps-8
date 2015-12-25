@@ -134,5 +134,36 @@ void levelOrderTraversal(BSTNode *root)
 
 void spiralLevelOrderTraversal(BSTNode *root)
 {
+    if(root==NULL)
+        return;
+    queue<BSTNode*> myQ;
+    BSTNode *t1;
+    int i,len,clock=-1;
+    myQ.push(root);
+    while(1)
+    {
+        if(len=myQ.size())
+        {
+            if(clock==-1)
+            {
+                for(i=0;i<len;i++)
+                {
+                    t1=myQ.front();
+                    cout<t1->data<<" ";
+                    myQ.push(t1->left);
+                    myQ.push(t1->right);
+                    myQ.pop();
+                }
+                clock=1;
+            }
+            else if(clock==1)
+            {
+                for(i=0;i<len;i++)
+                {
 
+                }
+                clock=-1;
+            }
+        }
+    }
 }
