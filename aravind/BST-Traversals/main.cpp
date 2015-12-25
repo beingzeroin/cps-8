@@ -39,10 +39,6 @@ int main()
 {
     BSTNode *root = createRandomBST(11,100);
     print_ascii_tree(root);
-    iterativePreorder(root);
-    cout<<endl;
-    iterativeInorder(root);
-    cout<<endl;
-    iterativePostorder(root);
+    levelOrderTraversal(root);
     return 0;
 }

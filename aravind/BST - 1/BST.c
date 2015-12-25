@@ -139,9 +139,14 @@ bool isBST(BSTNode *h)
         return false;
     if(h->data>h->left->data && h->data<h->right->data)
     {
-        isBST(h->left);
-        isBST(h->right);
+        return isBST(h->left) && isBST(h->right);
     }
     else
         return false;
+}
+int count(BSTNode *h)
+{
+    if(h==NULL)
+        return 0;
+    return 1+count(h->left)+count(h->right);
 }

@@ -17,12 +17,14 @@ BSTNode *searchBSTNode(BSTNode *root, ElementType data);
 BSTNode *deleteBSTNode(BSTNode *root, ElementType data);
 BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data);
 BSTNode *createRandomBST(int nodeCount, int maxVal);
-bool isBST(BSTNode *h)
-void print_ascii_tree(BSTNode * t);
+bool isBST(BSTNode *h);
+void print_ascii_tree(BSTNode *t);
 
 void iterativePreorder(BSTNode *r);
 void iterativeInorder(BSTNode *r);
 void iterativePostorder(BSTNode *r);
+void levelOrderTraversal(BSTNode *r);
+void rlevelOrderTraversal(BSTNode *r);
 void recursivPreorder(BSTNode *r);
 
 #endif // BST_H_INCLUDED

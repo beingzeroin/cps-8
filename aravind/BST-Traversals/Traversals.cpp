@@ -1,6 +1,7 @@
 #include <stack>
 #include <cstdlib>
 #include <iostream>
+#include <queue>
 #include "BST.h"
 using namespace std;
 
@@ -82,5 +83,35 @@ void iterativePostorder(BSTNode *r)
     }
     */
 
+}
+
+void levelOrderTraversal(BSTNode *r)
+{
+    queue<BSTNode*> myqueue;
+    if(r==NULL)
+        return;
+    myqueue.push(r);
+    BSTNode *c=r;
+    while(!myqueue.empty())
+    {
+        c = myqueue.front();
+        myqueue.pop();
+        if(c->left!=NULL)
+            myqueue.push(c->left);
+        if(c->right!=NULL)
+            myqueue.push(c->right);
+
+    }
+}
+void rlevelOrderTraversal(BSTNode *r)
+{
+    queue<BSTNode*> myqueue;
+    if(r==NULL)
+        return;
+    myqueue.push(r);
+    levelOrderTraversal(r->left);
+    levelOrderTraversal(r->right);
+
+    }
 }
 
