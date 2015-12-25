@@ -122,3 +122,26 @@ BSTNode *deleteBSTNode(BSTNode *root, ElementType data)
 
     return root;
 }
+
+bool isBST(BSTNode *h)
+{
+    if(h==NULL)
+        return true;
+    if(h->left == NULL&&h->right==NULL)
+        return true;
+    if(h->left == NULL && h->data < h->right)
+        isBST(h->right);
+    else
+        return false;
+    if(h->right == NULL && h->data > h->left)
+        isBST(h->left);
+    else
+        return false;
+    if(h->data>h->left->data && h->data<h->right->data)
+    {
+        isBST(h->left);
+        isBST(h->right);
+    }
+    else
+        return false;
+}
