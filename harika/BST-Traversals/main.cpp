@@ -3,10 +3,10 @@
 #include "BST.h"
 #include<assert.h>
 
-int main()
+int unitTests()
 {
-    BSTNode *root = NULL;
-    root = insertBSTNode(root, 5);
+
+    /*root = insertBSTNode(root, 5);
     root = insertBSTNode(root, 3);
     root = insertBSTNode(root, 1);
     root = insertBSTNode(root, 4);
@@ -17,21 +17,27 @@ int main()
     //assert(searchBSTNode(root,3)!=NULL);
 
     print_ascii_tree(root);
-    iterativeInorder(root);
-    printf("\n");
-    iterativePreorder(root);
+
     // Delete Root
-   /* root = rdeleteBSTNode(root, 5);
+    root = rdeleteBSTNode(root, 5);
     print_ascii_tree(root);
     root = rdeleteBSTNode(root, 7);
     print_ascii_tree(root);
     root = deleteBSTNode(root, 3);
     print_ascii_tree(root);
-    root = rdeleteBSTNode(root, 100);
+    root = rdeleteBSTNode(root, 100);*/
 
-    print_ascii_tree(root);
-*/
+
     return 0;
 }
 
+int main()
+{
+    BSTNode *root = createRandomBST(10,100);
+    print_ascii_tree(root);
+    //iterativePreorder(root);
+    iterativeInorder(root);
 
+
+    return 0;
+}

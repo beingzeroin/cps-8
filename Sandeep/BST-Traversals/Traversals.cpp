@@ -1,8 +1,12 @@
 #include <stack>
+<<<<<<< HEAD
+#inclue<BST.h>
+=======
 #include "BST.h"
 #include <cstdlib>
 #include <cstdio>
 
+>>>>>>> 3474c707c392d908e663c1f6b3a9fa691ebe0d97
 using namespace std;
 
 void iterativeInorder(BSTNode *r)
@@ -76,11 +80,38 @@ void iterativePostrder(BSTNode *r)
 void iterativePreorder(BSTNode *r)
 {
     stack<BSTNode*> mystack;
+    stack *s=createstack;
 
     while(1)
     {
         while(r!=NULL)
         {
+<<<<<<< HEAD
+          printf("%d ",r->data);
+          mystack.push(r);
+          r=r->left;
+        }
+        if(mystack.empty())
+        break;
+        r=mysatck.top();
+        mystack.pop();
+        r=r->right;
+    }
+}
+
+void iterativeinorder(BSTNode *r)
+{
+  stack<BSTNode>mystack;
+  stack *s=createstack();
+  while(1)
+  {
+      while(r!=NULL)
+      {
+        printf("%d ",r->data);
+        mystack.push(r);
+        r=r->right;
+      }
+=======
             printf("%d ", r->data);
             mystack.push(r);
             r = r->left;
@@ -93,9 +124,19 @@ void iterativePreorder(BSTNode *r)
 
         r = r->right;
     }
+>>>>>>> 3474c707c392d908e663c1f6b3a9fa691ebe0d97
 
+      if(mystack.empty())
+        break;
+      r=mystack.top();
+      mystack.pop();
+  }
 }
 
+<<<<<<< HEAD
+
+
+=======
 /*
 
 // Take a Stack
@@ -117,3 +158,4 @@ while(1)
 
 s = destroyStack();
 */
+>>>>>>> 3474c707c392d908e663c1f6b3a9fa691ebe0d97

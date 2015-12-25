@@ -34,9 +34,9 @@
 		</Compiler>
 		<Unit filename="BST.cpp" />
 		<Unit filename="BST.h" />
-		<Unit filename="Traversals.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="printBinaryTree.cpp" />
+		<Unit filename="reaversals.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

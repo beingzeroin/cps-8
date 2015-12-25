@@ -14,15 +14,18 @@ int main()
     root = rinsertBSTNode(root, 6);
     root = rinsertBSTNode(root, 9);
 
-    print_ascii_tree(root);
+    //print_ascii_tree(root);
 
     // Delete Root
-    root = delteBSTNode2(root, 1);
+        printf("%d ",searchBSTNode(root, 5)->data);
 
     print_ascii_tree(root);
-
-    //BSTNode *temp=searchBSTNode(root,1);
-    //printf("%d",temp->data);
+    root = delteBSTNode(root, 4);
+    print_ascii_tree(root);
+    root = delteBSTNode(root, 3);
+    print_ascii_tree(root);
+    root = delteBSTNode(root, 5);
+    print_ascii_tree(root);
 
     return 0;
 }

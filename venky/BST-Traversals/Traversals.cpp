@@ -54,6 +54,7 @@ void iterativePostorder(BSTNode *r)
     if(r==NULL)
         return;
     stack<BSTNode*> mystack;
+    BSTNode *p, *rc;
     while(1)
     {
         while(r!=NULL)
@@ -66,8 +67,26 @@ void iterativePostorder(BSTNode *r)
         }
         if(mystack.empty())
             break;
-        r=mystack.top();
+        p=mystack.top();
         mystack.pop();
-        r=r->right;
+        if(mystack.empty())
+        {
+            printf("%d ",p->data);
+            break;
+        }
+        rc=mystack.top();
+        mystack.pop();
+
+        if(rc == p->right)
+        {
+            mystack.push(p);
+            r=rc;
+        }
+        else
+        {
+            printf("%d ",p->data);
+            mystack.push(rc);
+            r = NULL;
+        }
     }
 }

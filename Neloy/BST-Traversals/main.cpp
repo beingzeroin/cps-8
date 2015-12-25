@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <cstdlib>
+#include <stdlib.h>
 #include "BST.h"
 #include<assert.h>
 
-int main()
+int unitTest()
 {
     BSTNode *root = NULL;
     root = insertBSTNode(root, 5);
@@ -17,11 +17,9 @@ int main()
     //assert(searchBSTNode(root,3)!=NULL);
 
     print_ascii_tree(root);
-    iterativeInorder(root);
-    printf("\n");
-    iterativePreorder(root);
+
     // Delete Root
-   /* root = rdeleteBSTNode(root, 5);
+    root = rdeleteBSTNode(root, 5);
     print_ascii_tree(root);
     root = rdeleteBSTNode(root, 7);
     print_ascii_tree(root);
@@ -30,8 +28,20 @@ int main()
     root = rdeleteBSTNode(root, 100);
 
     print_ascii_tree(root);
-*/
+    iterativePreorder(root);
     return 0;
 }
 
 
+int main()
+{
+    BSTNode *root = createRandomTree(10,20);
+    print_ascii_tree(root);
+    iterativePreorder(root);
+    printf("\n");
+    iterativeInorder(root);
+    printf("\n");
+    iterativePostorder(root);
+    //unitTest();
+    return 0;
+}
