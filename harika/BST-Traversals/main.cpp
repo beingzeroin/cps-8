@@ -35,8 +35,8 @@ int main()
 {
     BSTNode *root = createRandomBST(10,100);
     print_ascii_tree(root);
-    iterativePreorder(root);
-    //iterativeInorder(root);
+    //iterativePreorder(root);
+    iterativeInorder(root);
 
 
     return 0;

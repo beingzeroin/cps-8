@@ -5,35 +5,23 @@
 using namespace std;
 void iterativeInorder(BSTNode *root)
 {
+    if(root==NULL)
+        return;
     stack<BSTNode*> mystack;
     while(1)
     {
-        while(root->left!=NULL)
+        while(root!=NULL)
         {
 
             mystack.push(root->left);
             root=root->left;
         }
+        if(mystack.empty())
+            break;
+        root=mystack.top();
         printf("%d",root->data);
-        while(mystack.empty())
-        {
-            mystack.pop();
-            printf("%d",mystack.top());
-        }
-        while(root->right!=NULL)
-        {
-
-            mystack.push(root->right);
-            root=root->right;
-        }
-        printf("%d",root->data);
-        while(mystack.empty())
-        {
-
-            printf("%d",mystack.top());
-            mystack.pop();
-        }
-
+        mystack.pop();
+        root=root->right;
     }
 
 
@@ -42,6 +30,8 @@ void iterativeInorder(BSTNode *root)
 
 void iterativePreorder(BSTNode *root)
 {
+    if(root==NULL)
+        return;
     stack<BSTNode*> mystack;
     while(1)
     {
@@ -56,13 +46,13 @@ void iterativePreorder(BSTNode *root)
         root=mystack.top();
         mystack.pop();
         root=root->right;
-        while(root!=NULL)
+       /* while(root!=NULL)
         {
             printf("%d \t",root->data);
             root=root->right;
         }
         if(mystack.empty())
-                break;
+                break;*/
 
     }
 
