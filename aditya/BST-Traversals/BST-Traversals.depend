@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1450925413 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450926365 c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.h
+
+1450925413 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.cpp
+	"BST.h"
+	<stdlib.h>
+
+1450926184 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1450926702 source:c:\users\ch.aditya\desktop\coding\bst-traversals\bst.cpp
+	"BST.h"
+	<cstdlib>
+	<ctime>
+
+1451119960 c:\users\ch.aditya\desktop\coding\bst-traversals\bst.h
+
+1450926426 source:c:\users\ch.aditya\desktop\coding\bst-traversals\printbinarytree.cpp
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1451122525 source:c:\users\ch.aditya\desktop\coding\bst-traversals\main.cpp
+	<cstdio>
+	<cstdlib>
+	"BST.h"
+	<cassert>
+
+1451122422 source:c:\users\ch.aditya\desktop\coding\bst-traversals\traversals.cpp
+	"BST.h"
+	<stack>
+	<queue>
+	<cstdlib>
+	<cstdio>
+	"myList.h"
+
+1451122256 source:c:\users\ch.aditya\desktop\coding\bst-traversals\mylist.cpp
+	"mylist.h"
+	<cstdio>
+
+1451121538 c:\users\ch.aditya\desktop\coding\bst-traversals\mylist.h
+	<cstdio>
+	<cstdlib>
+	<ctime>
+	"BST.h"
+
