@@ -5,6 +5,9 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+* {
+  border: 0px;
+}
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -1577,26 +1580,11 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
+
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
@@ -4886,8 +4874,7 @@ a.badge:focus {
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
+   
   }
   .jumbotron h1,
   .jumbotron .h1 {
