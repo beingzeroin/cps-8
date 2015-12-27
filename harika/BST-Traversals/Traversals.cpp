@@ -13,19 +13,17 @@ void iterativeInorder(BSTNode *root)
         while(root!=NULL)
         {
 
-            mystack.push(root->left);
+            mystack.push(root); // It may push null
             root=root->left;
         }
         if(mystack.empty())
             break;
         root=mystack.top();
-        printf("%d",root->data);
+        printf("%d ",root->data);
         mystack.pop();
-        root=root->right;
+
+        root=root->right; // Begin the same steps with Root->right.
     }
-
-
-
 }
 
 void iterativePreorder(BSTNode *root)
@@ -37,7 +35,7 @@ void iterativePreorder(BSTNode *root)
     {
         while(root!=NULL)
         {
-            printf("%d \t",root->data);
+            printf("%d ",root->data);
             mystack.push(root);
             root=root->left;
         }
