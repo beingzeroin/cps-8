@@ -1,18 +1,11 @@
-#include <stdbool.h>
 #include <stdlib.h>
-#define ALPHABET_SIZE 26
-typedef struct trien TNode;
-struct trien
-{
-    bool isEOW;
-    TNode *next[ALPHABET_SIZE];
-};
-
+#include <stdbool.h>
+#include "trie.h"
 struct trien *createTrieNode()
 {
-    TNode *newNode=(struct trien *)malloc(0);
-    //newNode->bool=false;
-    //newNode->next=(struct trien *)malloc(sizeof(next));
+    TNode *newNode=(struct trien *)malloc(sizeof(TNode));
+    newNode->isEOW=false;
+    newNode->next=(struct trien *)malloc(0);
     return newNode;
 };
 /*
