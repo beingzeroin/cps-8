@@ -6,7 +6,8 @@
 using namespace std;
 int main()
 {
-    BSTNode *root=createBSTNode(10);
+    BSTNode *root=NULL;
+
     root = insertBSTNode(root, 5);
     root = insertBSTNode(root, 3);
     root = insertBSTNode(root, 1);
@@ -18,8 +19,8 @@ int main()
     //assert(searchBSTNode(root,3)!=NULL);
 
     print_ascii_tree(root);
-    levelOrderTraversal(root);
-
+    //levelOrderTraversal(root);
+    cout<<hasSum(root,13);
 
 
     return 0;

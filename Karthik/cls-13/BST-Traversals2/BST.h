@@ -25,6 +25,8 @@ void iterativeInorder(BSTNode *r);
 bool recursiveIsBST(BSTNode *root);
 void levelOrderTraversal(BSTNode *root);
 void spiralLevelOrderTraversal(BSTNode *root);
+bool hasSum(BSTNode *r,int sum);
+
 
 
 

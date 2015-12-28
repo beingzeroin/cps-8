@@ -2,6 +2,7 @@
 #include <iostream>
 #include "BST.h"
 #include <queue>
+//#include <bool.h>
 using namespace std;
 void iterativePreorder(BSTNode *root)
 {
@@ -131,7 +132,7 @@ void levelOrderTraversal(BSTNode *root)
             myqueue.push(t1->right);
     }
 }
-
+/*
 void spiralLevelOrderTraversal(BSTNode *root)
 {
     if(root==NULL)
@@ -142,14 +143,14 @@ void spiralLevelOrderTraversal(BSTNode *root)
     myQ.push(root);
     while(1)
     {
-        if(len=myQ.size())
+        if(len==myQ.size())
         {
             if(clock==-1)
             {
                 for(i=0;i<len;i++)
                 {
                     t1=myQ.front();
-                    cout<t1->data<<" ";
+                    cout<<t1->data<<" ";
                     myQ.push(t1->left);
                     myQ.push(t1->right);
                     myQ.pop();
@@ -167,3 +168,6 @@ void spiralLevelOrderTraversal(BSTNode *root)
         }
     }
 }
+
+
+*/

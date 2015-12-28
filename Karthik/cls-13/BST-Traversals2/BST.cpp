@@ -174,4 +174,23 @@ BSTNode *createRandomTree(int numOfNodes, ElementType maxValue)
     return root;
 }
 
-
+bool hasSum(BSTNode *r,int sum)
+{
+    sum=sum-r->data;
+    if(sum==0)
+        return true;
+    if(sum<0)
+        return false;
+    bool temp=false;
+    if(r->left)
+    {
+        temp=hasSum(r->left,sum);
+        return temp;
+    }
+    if(r->right)
+    {
+        temp=hasSum(r->right,sum);
+        return temp;
+    }
+    return temp;
+}
