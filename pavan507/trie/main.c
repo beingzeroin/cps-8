@@ -25,33 +25,56 @@ TNode* createTrieNode()
     return t;
 
 }
+bool isLeaf(TNode *root)
+{
+    int i;
+    if(root==NULL)
+        return false;
+    for(i=0;i<26;i++)
+        if(root->next!=NULL)
+        return false;
+    return true;
+    }
 bool deleteWordFromTrie(TNode *root,char *word)
 {
     int i;
-    if(root==NULL||word[0]=='\0')
+    if(root==NULL)
         return false;
 
-    if(root->isEOW==true)
+    if(word[0]=='\0')
     {
-        for(i=0; i<26; i++)
-        {
-            if(root->next[i]!=NULL)
-            {
-
-                root->isEOW=false;
-                return true;
-            }
-        }
-
+        if(root->isEOW==false)
+        return false;
+          if(isLeaf(root))
+          {
+           free(root);
             return true;
+          }
+    else
+    {
+        root->isEOW=false;
+        return false;
+    }
 
     }
 
 
     int idx=word[0]-'a';
-    TNode *temp=root->next[idx];
+   // TNode *temp=root->next[idx];
     //root->next[idx]=NULL;
-    return deleteWordFromTrie(temp,word+1);
+    if (deleteWordFromTrie(root->next[idx],word+1))
+    {
+        root->next[idx]=NULL;
+        if(isLeaf(root)&&root->isEOW==false)
+        {
+
+            free(root);
+            return true;
+
+        }
+
+
+    }
 
 }
 bool rinsertWordInTrie(TNode *root,char *word)
@@ -138,19 +161,20 @@ int main()
 {
     TNode *root=createTrieNode();
     char word[100];
-    insertWordInTrie(root,"apple");
+   insertWordInTrie(root,"apple");
     // insertWordInTrie(root,"pavan");
     rinsertWordInTrie(root,"praveen");
     rinsertWordInTrie(root,"praveen");
     rinsertWordInTrie(root,"pavan");
     rinsertWordInTrie(root,"buffaloe");
-    rinsertWordInTrie(root,"cat");
+    rinsertWordInTrie(root,"cars");
+    rinsertWordInTrie(root,"cart");
     rinsertWordInTrie(root,"banana");
     rinsertWordInTrie(root,"dog");
-    rinsertWordInTrie(root,"cars");
+    rinsertWordInTrie(root,"carts");
     rinsertWordInTrie(root,"cardiology");
     printWordsInTrie(root);
-    deleteWordFromTrie(root,"cat");
+    deleteWordFromTrie(root,"cart");
     printf("\nafter deletion\n");
     printWordsInTrie(root);
     /*printf("enter string\n");
