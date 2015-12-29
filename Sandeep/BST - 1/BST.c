@@ -4,6 +4,7 @@
 BSTNode *createBSTNode(ElementType data)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
    BSTNode *node=malloc(sizeof(BSTNode));
    node->data=data;
    node->left=NULL;
@@ -11,6 +12,8 @@ BSTNode *createBSTNode(ElementType data)
    return node;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
 <<<<<<< HEAD
     BSTNode *newNode=malloc(sizeof(BSTNode));
     newNode->data=data;
@@ -30,11 +33,15 @@ BSTNode *createBSTNode(ElementType data)
     return NULL;
 >>>>>>> fe043da394043d1e9fd8d5058ed0e4e03257dc63
 >>>>>>> cc18206aa627d8a76700b20568b8271e4b17958e
+<<<<<<< HEAD
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
+=======
 >>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
 }
 
 BSTNode *searchBSTNode(BSTNode *root,ElementType data)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if(root==NULL)
         return createBSTNode(data);
@@ -43,6 +50,8 @@ BSTNode *searchBSTNode(BSTNode *root,ElementType data)
     if(root->data<data)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
     if(root==NULL || data==root->data)
         return root;
     if(data<root->data)
@@ -94,6 +103,9 @@ BSTNode *rinsertBSTNode(BSTNode *root, ElementType data)
     if(data<root->data)
         root->left=rinsertBSTNode(root->left,data);
     if(data>root->data)
+<<<<<<< HEAD
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
+=======
 >>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
         root->right=rinsertBSTNode(root->right,data);
     return root;
@@ -101,6 +113,7 @@ BSTNode *rinsertBSTNode(BSTNode *root, ElementType data)
 
 BSTNode *insertBSTNode(BSTNode *root, ElementType data)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if(root==NULL)
         return createBSTNode(data);
@@ -129,6 +142,8 @@ BSTNode *insertBSTNode(BSTNode *root, ElementType data)
     return NULL;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
     BSTNode *newNode=createBSTNode(data);
     if(root==NULL)
         return newNode;
@@ -191,11 +206,15 @@ BSTNode *searchBSTNode(BSTNode *root, ElementType data)
     }
 >>>>>>> cc18206aa627d8a76700b20568b8271e4b17958e
     return root;
+<<<<<<< HEAD
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
+=======
 >>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
 }
 
 BSTNode *searchBSTNode(BSTNode *root,ElementType data)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if(root==NULL)
             return NULL;
@@ -220,6 +239,8 @@ BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data)
         if(root->left == NULL && root->right == NULL)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
     if(root==NULL)
         return root;
     if(data<root->data)
@@ -278,11 +299,15 @@ BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data)
     if(t==root)
     {
         if(temp==NULL)
+<<<<<<< HEAD
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
+=======
 >>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
         {
             free(root);
             return NULL;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         else if(root->left!=NULL && root->right!=NULL)
         {
@@ -320,6 +345,8 @@ BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data)
         root->right = deleteBSTNode(root->right, data);
 
 =======
+=======
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
     }
     if(t->left==NULL&&t->right==NULL)
     {
@@ -398,6 +425,9 @@ BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data)
 >>>>>>> cc18206aa627d8a76700b20568b8271e4b17958e
         }
     }
+<<<<<<< HEAD
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
+=======
 >>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
     return root;
 }
