@@ -3,7 +3,10 @@
 #include "BST.h"
 #include<assert.h>
 
+//<<<<<<< HEAD
 
+//=======
+//>>>>>>> 5ae402af7707870aa0c61f2f0c2eb497a5180003
 int main()
 {
     BSTNode *root1 = NULL,*root2=NULL,*root=NULL;
@@ -12,6 +15,7 @@ int main()
     root1 = insertBSTNode(root1, 1);
     root1= insertBSTNode(root1, 4);
 
+//<<<<<<< HEAD
     root1 = insertBSTNode(root1, 7);
     root1 = insertBSTNode(root1, 6);
     root1 = insertBSTNode(root1, 9);
@@ -28,9 +32,10 @@ root->right=root1;*/
     //printf("\n%d ",height(root1));
   // printLevelOrder(root1);
     printf("\n");
+    printPath(root1);
    //root1= deleteBSTNode(root1,7);
     //print_ascii_tree(root1);
-    printf("%d ",hasSum(root1,6));
+  //  printf("%d ",hasSum(root1,6));
     //printSpiralOrder(root1);
     //levelOrderTraversal(root);
     //printf("\n%d \n",height(root));
@@ -43,6 +48,12 @@ root->right=root1;*/
 //    spiralOrderTraversal(root);
   //  iterativePostorder(root);
     //recursiveInorder(root);
+//=======
+   /* print_ascii_tree(root);
+    iterativeInorder(root);
+    printf("\n");
+    iterativePreorder(root);*/
+//>>>>>>> 5ae402af7707870aa0c61f2f0c2eb497a5180003
     // Delete Root
    /* root = rdeleteBSTNode(root, 5);
     print_ascii_tree(root);

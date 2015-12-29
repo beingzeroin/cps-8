@@ -6,11 +6,15 @@
 int c=0;
 using namespace std;
 
-void iterativeInorder(BSTNode *r)
+/*void iterativeInorder(BSTNode *r)
 {
     stack<BSTNode*> mystack;
     if(r==NULL)
         return;
+//<<<<<<< HEAD
+//=======
+//    stack<BSTNode*> mystack;
+//>>>>>>> 5ae402af7707870aa0c61f2f0c2eb497a5180003
     while(1)
     {
         while(r!=NULL)
@@ -18,11 +22,15 @@ void iterativeInorder(BSTNode *r)
             mystack.push(r);
             r=r->left;
 
+//<<<<<<< HEAD
 
+//=======
+//>>>>>>> 5ae402af7707870aa0c61f2f0c2eb497a5180003
         }
         if(mystack.empty())
             break;
         r=mystack.top();
+//<<<<<<< HEAD
         mystack.pop();
         printf("%d ",r->data);
         r=r->right;
@@ -45,10 +53,25 @@ void iterativePostorder(BSTNode *r)
     if(r==NULL)
         return;
     stack<BSTNode*>mystack;
+//=======
+        printf("%d ",r->data);
+        mystack.pop();
+        r=r->right;
+
+    }
+
+
+/*void iterativePreorder(BSTNode *r)
+{
+    if(r==NULL)
+        return;
+    stack<BSTNode*> mystack;
+//>>>>>>> 5ae402af7707870aa0c61f2f0c2eb497a5180003
     while(1)
     {
         while(r!=NULL)
         {
+//<<<<<<< HEAD
             if(r->right!=NULL)
                 mystack.push(r->right);
             mystack.push(r);
@@ -80,7 +103,19 @@ void iterativePostorder(BSTNode *r)
         }
 
     }
+//=======
+            printf("%d ",r->data);
+            mystack.push(r);
+            r=r->left;
+//>>>>>>> 5ae402af7707870aa0c61f2f0c2eb497a5180003
 
+        }
+        if(mystack.empty())
+            break;
+        r=mystack.top();
+        mystack.pop();
+        r=r->right;
+    }
 }
 void levelOrderTraversal(BSTNode *r)
 {
@@ -124,6 +159,27 @@ void printLevelOrder(BSTNode *r)
         printGivenLevel(r,i);
     }
 
+void iterativePostorder(BSTNode *r)
+{
+    if(r==NULL)
+        return;
+    stack<BSTNode*> mystack;
+    while(1)
+    {
+        while(r!=NULL)
+        {
+            if(r->right!=NULL)
+                mystack.push(r->right);
+            mystack.push(r);
+            r=r->left;
+
+        }
+        if(mystack.empty())
+            break;
+        r=mystack.top();
+        mystack.pop();
+        r=r->right;
+    }
 }
 void printGivenLevel(BSTNode *r,int level)
 {
@@ -177,6 +233,34 @@ int nodeCount(BSTNode *r)
         return 0;
     return (1+nodeCount(r->left)+nodeCount(r->right));
 
+}*/
+void printPath(BSTNode *r)
+{
+    int path[100];
+    printRecursively(r,path,0);
+
+}
+void printRecursively(BSTNode *r,int path[],int pathlen)
+{
+    if(r==NULL)
+        return;
+    path[pathlen]=r->data;
+    pathlen++;
+    if(r->left==NULL&&r->right==NULL)
+        printPathArray(path,pathlen);
+    else
+    {
+        printRecursively(r->left,path,pathlen);
+        printRecursively(r->right,path,pathlen);
+    }
+
+}
+void printPathArray(int path[],int pathlen)
+{
+    int i;
+    for(i=0;i<pathlen;i++)
+        printf("%d ",path[i]);
+    printf("\n");
 }
 /*
 void spiralOrderTraversal(BSTNode *r)

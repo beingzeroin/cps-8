@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1450925413 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450926365 c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.h
+
+1450925413 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.cpp
+	"BST.h"
+	<stdlib.h>
+
+1450926184 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1450926548 source:c:\users\beingzero\desktop\cps-8\sandeep\bst-traversals\bst.cpp
+	"BST.h"
+	<stdlib.h>
+
+1450929213 c:\users\beingzero\desktop\cps-8\sandeep\bst-traversals\bst.h
+
+1450928893 source:c:\users\beingzero\desktop\cps-8\sandeep\bst-traversals\main.cpp
+	<cstdlib>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1450926548 source:c:\users\beingzero\desktop\cps-8\sandeep\bst-traversals\printbinarytree.cpp
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1450929859 source:c:\users\beingzero\desktop\cps-8\sandeep\bst-traversals\reaversals.cpp
+	<stack>
+	<iostream>
+	"BST.h"
+
+1450926548 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\printbinarytree.cpp
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1451014249 c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\bst.h
+
+1451011694 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\bst.cpp
+	"BST.h"
+	<stdlib.h>
+	<time.h>
+
+1451014128 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\main.cpp
+	<cstdlib>
+	<iostream>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1451011972 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\reaversals.cpp
+	<stack>
+	<iostream>
+	"BST.h"
+
