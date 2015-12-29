@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1450925413 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450926365 c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.h
+
+1450925413 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.cpp
+	"BST.h"
+	<stdlib.h>
+
+1450926184 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1450928206 source:c:\users\neloy\desktop\tp\beingzero cps\day12 _ 24-12-2015\bst-traversals\bst.cpp
+	"BST.h"
+	<stdlib.h>
+	<time.h>
+
+1450929171 c:\users\neloy\desktop\tp\beingzero cps\day12 _ 24-12-2015\bst-traversals\bst.h
+
+1450926464 source:c:\users\neloy\desktop\tp\beingzero cps\day12 _ 24-12-2015\bst-traversals\printbinarytree.cpp
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1450930698 source:c:\users\neloy\desktop\tp\beingzero cps\day12 _ 24-12-2015\bst-traversals\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1450959874 source:c:\users\neloy\desktop\tp\beingzero cps\day12 _ 24-12-2015\bst-traversals\traversals.cpp
+	<cstdio>
+	<stack>
+	"BST.h"
+

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD:Karthik/cls-5/cls-5.layout
+	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="41" topLine="44" />
+=======
 	<File name="main.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="910" topLine="45" />
+>>>>>>> 00d6df4058f28121513b4bd11a320bbf6faa8cfe:Sandeep/Class-8/Class-8.layout
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
