@@ -1,13 +1,52 @@
 #include <stack>
-<<<<<<< HEAD
-#inclue<BST.h>
-=======
 #include "BST.h"
 #include <cstdlib>
 #include <cstdio>
+#include <queue>
 
->>>>>>> 3474c707c392d908e663c1f6b3a9fa691ebe0d97
 using namespace std;
+
+void levelOrderSpiral(BSTNode *r)
+{
+    printf("\nSPIRAL : ");
+    if(r==NULL)
+        return ;
+    queue<BSTNode *> q;
+
+    q.push(r);
+    q.push(NULL);
+    bool rtl = true;
+    BSTNode *c ;
+    while(!q.empty())
+    {
+        c = q.front();
+        q.pop();
+        if(c==NULL)
+        {
+            rtl = !rtl;
+            q.push(NULL);
+        }
+        else
+        {
+            printf("%d ", c->data);
+            if(rtl)
+            {
+                if(c->right)
+                    q.push(c->right);
+                if(c->left)
+                    q.push(c->left);
+            }
+            else
+            {
+                 if(c->left)
+                    q.push(c->left);
+                 if(c->right)
+                    q.push(c->right);
+            }
+        }
+    }
+}
+
 
 void iterativeInorder(BSTNode *r)
 {
@@ -17,14 +56,14 @@ void iterativeInorder(BSTNode *r)
     {
         while(r!=NULL)
         {
-/*            if(r->right!=NULL)
-                mystack.push(r->right);
-                */
+            /*            if(r->right!=NULL)
+                            mystack.push(r->right);
+                            */
             mystack.push(r);
             r= r->left;
 
         }
-         if(mystack.empty())
+        if(mystack.empty())
             break;
         r = mystack.top();
         printf(" %d",r->data);
@@ -80,38 +119,12 @@ void iterativePostrder(BSTNode *r)
 void iterativePreorder(BSTNode *r)
 {
     stack<BSTNode*> mystack;
-    stack *s=createstack;
+//    stack *s=createstack;
 
     while(1)
     {
         while(r!=NULL)
         {
-<<<<<<< HEAD
-          printf("%d ",r->data);
-          mystack.push(r);
-          r=r->left;
-        }
-        if(mystack.empty())
-        break;
-        r=mysatck.top();
-        mystack.pop();
-        r=r->right;
-    }
-}
-
-void iterativeinorder(BSTNode *r)
-{
-  stack<BSTNode>mystack;
-  stack *s=createstack();
-  while(1)
-  {
-      while(r!=NULL)
-      {
-        printf("%d ",r->data);
-        mystack.push(r);
-        r=r->right;
-      }
-=======
             printf("%d ", r->data);
             mystack.push(r);
             r = r->left;
@@ -123,39 +136,12 @@ void iterativeinorder(BSTNode *r)
         mystack.pop();
 
         r = r->right;
+
+        if(mystack.empty())
+            break;
+        r=mystack.top();
+        mystack.pop();
     }
->>>>>>> 3474c707c392d908e663c1f6b3a9fa691ebe0d97
 
-      if(mystack.empty())
-        break;
-      r=mystack.top();
-      mystack.pop();
-  }
 }
 
-<<<<<<< HEAD
-
-
-=======
-/*
-
-// Take a Stack
-Stack *s = createStack();
-
-while(1)
-{
-	// Keep pushing and printing Elements
-	// move root = root->left
-	// until we reach NULL
-
-	// BREAK if Stack is Empty
-	// Pop
-	root = pop(s);
-
-	// Start the procedure again from Right
-	root = root->right;
-}
-
-s = destroyStack();
-*/
->>>>>>> 3474c707c392d908e663c1f6b3a9fa691ebe0d97

@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1450924959 source:c:\users\welcome\desktop\cps-8\pavan507\bst - 1\bst.c
+1451010015 source:c:\users\welcome\desktop\cps-8\pavan507\bst - 1\bst.c
 	"BST.h"
 	<stdlib.h>
 	<time.h>
+	<stdbool.h>
 
 1450924882 c:\users\welcome\desktop\cps-8\pavan507\bst - 1\bst.h
 
-1450924989 source:c:\users\welcome\desktop\cps-8\pavan507\bst - 1\main.c
+1451010168 source:c:\users\welcome\desktop\cps-8\pavan507\bst - 1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"BST.h"

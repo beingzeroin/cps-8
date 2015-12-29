@@ -15,6 +15,7 @@ BSTNode *insertBSTNode(BSTNode *root, ElementType data);
 BSTNode *rinsertBSTNode(BSTNode *root, ElementType data);
 BSTNode *searchBSTNode(BSTNode *root, ElementType data);
 BSTNode *delteBSTNode(BSTNode *root, ElementType data);
+BSTNode *delteBSTNode2(BSTNode *root, ElementType data);
 
 
 #endif // BST_H_INCLUDED
