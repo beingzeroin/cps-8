@@ -1,6 +1,7 @@
 #include "BST.h"
 #include <stdlib.h>
 #include<time.h>
+#include<stdbool.h>
 
 BSTNode *createBSTNode(ElementType data)
 {
@@ -76,7 +77,7 @@ BSTNode *insertBSTNode(BSTNode *root, ElementType data)
 
     }
     }
-    return root;
+    //return root;
 }
 BSTNode *minofRightSubtree(BSTNode *root)
 {
@@ -84,6 +85,20 @@ BSTNode *minofRightSubtree(BSTNode *root)
         root=root->left;
     return root;
 
+}
+bool isBST(BSTNode *root)
+{
+    if(root==NULL)
+    return true;
+    if((root->left!=NULL&&root->left->data<root->data)&&root->data<root->right->data)
+    {
+
+    isBST(root->left);
+     isBST(root->right);
+     return true;
+    }
+    else
+        return false;
 }
 BSTNode *createRandomTree(BSTNode *root,int n)
 {

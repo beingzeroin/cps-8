@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1451361173 source:c:\users\neloy\desktop\tp\beingzero cps\day14 _ 28-12-2015\trie\main.cpp
+	<stdio.h>
+	"Trie.h"
+
+1451361435 source:c:\users\neloy\desktop\tp\beingzero cps\day14 _ 28-12-2015\trie\trie.cpp
+	"Trie.h"
+	<string.h>
+
+1451358151 c:\users\neloy\desktop\tp\beingzero cps\day14 _ 28-12-2015\trie\trie.h
+	<stdlib.h>
+	<stdbool.h>
+	<stdio.h>
+
+1451398483 source:c:\users\neloy\desktop\tp\beingzero cps\day14&15 _ 28-12-2015\trie\main.cpp
+	<stdio.h>
+	"Trie.h"
+
+1451398154 c:\users\neloy\desktop\tp\beingzero cps\day14&15 _ 28-12-2015\trie\trie.h
+	<stdlib.h>
+	<stdbool.h>
+	<stdio.h>
+
+1451398338 source:c:\users\neloy\desktop\tp\beingzero cps\day14&15 _ 28-12-2015\trie\trie.cpp
+	"Trie.h"
+	<string.h>
+
