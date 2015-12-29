@@ -2,6 +2,7 @@
 #include "BST.h"
 #include<cstdlib>
 #include<cstdio>
+#include<queue>
 using namespace std;
 void iterativeInorder(BSTNode *root)
 {
@@ -56,6 +57,59 @@ void iterativePreorder(BSTNode *root)
 
     }
 
+
+}
+void iterativelevelorder(BSTNode *root)
+{
+    queue<int> myqueue;
+    BSTNode *temp=root->left;
+    BSTNode *temp1=root->left;
+    BSTNode *temp2=root->right;
+    BSTNode *temp3=root->right;
+
+    if(root==NULL)
+        return;
+    else
+    {
+       printf("%d",root->data);
+       if(root->left!=NULL)
+       {
+            printf("%d",root->left->data);
+
+            if(temp->left!=NULL)
+                myqueue.push(temp->data);
+            else if(temp1->right!=NULL)
+                myqueue.push(temp1->data);
+            else
+                return;
+
+
+       }
+       if(root->right!=NULL)
+       {
+            printf("%d",root->right->data);
+
+            if(temp2->left!=NULL)
+                myqueue.push(temp->data);
+            else if(temp3->right!=NULL)
+                myqueue.push(temp1->data);
+            else
+                return;
+
+
+       }
+       while(myqueue.front()!=NULL)
+        {
+                printf("%d \t",myqueue.front());
+                myqueue.pop();
+        }
+        iterativelevelorder(temp);
+        iterativelevelorder(temp1);
+        iterativelevelorder(temp2);
+        iterativelevelorder(temp3);
+
+
+    }
 
 }
 
