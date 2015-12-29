@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1451322513 source:c:\users\welcome\desktop\cps-8\pavan507\trie\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+
