@@ -1,13 +1,11 @@
-#include <cstdlib>
-#include <iostream>
+#include <stdio.h>
 #include <stdlib.h>
 #include "BST.h"
-#include <assert.h>
-using namespace std;
+#include<assert.h>
+
 int main()
 {
-    BSTNode *root=NULL;
-
+    BSTNode *root = NULL;
     root = insertBSTNode(root, 5);
     root = insertBSTNode(root, 3);
     root = insertBSTNode(root, 1);
@@ -19,9 +17,17 @@ int main()
     //assert(searchBSTNode(root,3)!=NULL);
 
     print_ascii_tree(root);
-    //levelOrderTraversal(root);
-    cout<<hasSum(root,13);
 
+    // Delete Root
+    root = rdeleteBSTNode(root, 5);
+    print_ascii_tree(root);
+    root = rdeleteBSTNode(root, 7);
+    print_ascii_tree(root);
+    root = deleteBSTNode(root, 3);
+    print_ascii_tree(root);
+    root = rdeleteBSTNode(root, 100);
+
+    print_ascii_tree(root);
 
     return 0;
 }

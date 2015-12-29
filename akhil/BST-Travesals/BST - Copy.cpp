@@ -1,6 +1,6 @@
 #include "BST.h"
 #include <stdlib.h>
-#include <time.h>
+
 BSTNode *createBSTNode(ElementType data)
 {
     BSTNode *temp=(BSTNode*)malloc(sizeof(BSTNode));
@@ -157,40 +157,4 @@ BSTNode *searchBSTNode(BSTNode *root, ElementType data)
         return searchBSTNode(root->right,data);
 }
 
-BSTNode *createRandomTree(int numOfNodes, ElementType maxValue)
-{
-    ElementType data;
-    BSTNode *root=NULL;
-    int i;
-    srand(time(NULL));
-    for(i=0;i<numOfNodes;i++)
-    {
-        data = rand()%(maxValue+1);
-        if(searchBSTNode(root,data)==NULL)
-            root = rinsertBSTNode(root, data);
-        else
-            i--;
-    }
-    return root;
-}
 
-bool hasSum(BSTNode *r,int sum)
-{
-    sum=sum-r->data;
-    if(sum==0)
-        return true;
-    if(sum<0)
-        return false;
-    bool temp=false;
-    if(r->left)
-    {
-        temp=hasSum(r->left,sum);
-        return temp;
-    }
-    if(r->right)
-    {
-        temp=hasSum(r->right,sum);
-        return temp;
-    }
-    return temp;
-}

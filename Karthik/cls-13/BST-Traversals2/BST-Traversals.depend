@@ -44,22 +44,23 @@
 	<stdio.h>
 	<string.h>
 
-1451014249 c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\bst.h
+1451269729 c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\bst.h
 
-1451011694 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\bst.cpp
+1451270184 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\bst.cpp
 	"BST.h"
 	<stdlib.h>
 	<time.h>
 
-1451014128 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\main.cpp
+1451270231 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\main.cpp
 	<cstdlib>
 	<iostream>
 	<stdlib.h>
 	"BST.h"
 	<assert.h>
 
-1451011972 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\reaversals.cpp
+1451269756 source:c:\users\beingzero\desktop\cps-8\karthik\cls-13\bst-traversals2\reaversals.cpp
 	<stack>
 	<iostream>
 	"BST.h"
+	<queue>
 
