@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1450841582 source:c:\users\dell\cps-8\sandeep\bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450838548 c:\users\dell\cps-8\sandeep\bst - 1\bst.h
+
+1450838548 source:c:\users\dell\cps-8\sandeep\bst - 1\printbinarytree.c
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1450851386 source:c:\users\dell\cps-8\sandeep\bst - 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+

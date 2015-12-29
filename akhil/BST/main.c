@@ -3,7 +3,7 @@
 #include "BST.h"
 int main()
 {
-    BSTNode *root = NULL,*t;
+    BSTNode *root = NULL;
     root = insertBSTNode(root, 5);
 
     root = insertBSTNode(root, 3);
@@ -13,15 +13,19 @@ int main()
     root = insertBSTNode(root, 7);
     root = insertBSTNode(root, 6);
     root = insertBSTNode(root, 9);
+    root = rinsertBSTNode(root, 5);
+
+    root = rinsertBSTNode(root, 3);
+    root = rinsertBSTNode(root, 1);
+
 
     print_ascii_tree(root);
-    //t=searchBSTNode(root,4);
-    //printf("\n%d",t->data);
+
 
     // Delete Root
-    //root = delteBSTNode(root, 5);
+   // root = delteBSTNode(root, 5);
 
-    //print_ascii_tree(root);
+    print_ascii_tree(root);
 
     return 0;
 }
