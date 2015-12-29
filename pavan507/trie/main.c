@@ -25,6 +25,35 @@ TNode* createTrieNode()
     return t;
 
 }
+bool deleteWordFromTrie(TNode *root,char *word)
+{
+    int i;
+    if(root==NULL||word[0]=='\0')
+        return false;
+
+    if(root->isEOW==true)
+    {
+        for(i=0; i<26; i++)
+        {
+            if(root->next[i]!=NULL)
+            {
+
+                root->isEOW=false;
+                return true;
+            }
+        }
+
+            return true;
+
+    }
+
+
+    int idx=word[0]-'a';
+    TNode *temp=root->next[idx];
+    //root->next[idx]=NULL;
+    return deleteWordFromTrie(temp,word+1);
+
+}
 bool rinsertWordInTrie(TNode *root,char *word)
 {
     if(word[0]=='\0')
@@ -112,7 +141,7 @@ int main()
     insertWordInTrie(root,"apple");
     // insertWordInTrie(root,"pavan");
     rinsertWordInTrie(root,"praveen");
-    rinsertWordInTrie(root,"praveena");
+    rinsertWordInTrie(root,"praveen");
     rinsertWordInTrie(root,"pavan");
     rinsertWordInTrie(root,"buffaloe");
     rinsertWordInTrie(root,"cat");
@@ -120,6 +149,9 @@ int main()
     rinsertWordInTrie(root,"dog");
     rinsertWordInTrie(root,"cars");
     rinsertWordInTrie(root,"cardiology");
+    printWordsInTrie(root);
+    deleteWordFromTrie(root,"cat");
+    printf("\nafter deletion\n");
     printWordsInTrie(root);
     /*printf("enter string\n");
     scanf("%s",word);
