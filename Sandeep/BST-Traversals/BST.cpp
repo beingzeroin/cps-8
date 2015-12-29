@@ -1,5 +1,6 @@
 #include "BST.h"
 #include <stdlib.h>
+#include <assert.h>
 
 BSTNode *createBSTNode(ElementType data)
 {
@@ -58,7 +59,7 @@ BSTNode *createRandomBST(int nodeCount, int maxVal)
 {
     int i;
     BSTNode *r = NULL;
-    for(i=1;i<=nodeCount;i++)
+    for(i=1; i<=nodeCount; i++)
         r = insertBSTNode(r, rand()%maxVal);
     return r;
 }
@@ -71,7 +72,7 @@ ElementType min(BSTNode *n)
         return n->data;
     else
         n=n->left;*/
-     return n->data;
+    return n->data;
 
 }
 
@@ -149,7 +150,7 @@ BSTNode *deleteBSTNode(BSTNode *root, ElementType data)
         }
     }
 
-        return root;
+    return root;
 }
 
 BSTNode *searchBSTNode(BSTNode *root, ElementType data)
@@ -165,5 +166,39 @@ BSTNode *searchBSTNode(BSTNode *root, ElementType data)
     else
         return searchBSTNode(root->right,data);
 }
+bool isLeaf(BSTNode *r)
+{
+    if(r==NULL)
+        return false;
+    return r->left==NULL && r->right==NULL;
+}
 
+bool hasSum(BSTNode *r, int sum)
+{
+    /*
+    assert(r!=NULL);
+    if(isLeaf(r))
+        return sum==r->data;
 
+    int diff = sum - r->data;
+    return (hasSum(r->left, diff) || hasSum(r->right, diff));
+    */
+
+    assert(r!=NULL);
+    if(r->data == sum && r->left==NULL && r->right==NULL)
+        return true;
+
+    if(r->left)
+    {
+        bool lHasSum = hasSum(r->left, sum - r->data);
+        if(lHasSum)
+            return true;
+    }
+    if(r->right)
+    {
+        bool rHasSum = hasSum(r->right, sum - r->data);
+        if(rHasSum)
+            return true;
+    }
+    return false;
+}
