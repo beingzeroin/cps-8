@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int unitTests()
+int main()
 {
     TNode *root = createTrieNode();
 
@@ -43,7 +43,7 @@ int unitTests()
     return 0;
 }
 
-int main()
+/*int main()
 {
     TNode *root = createTrieNode();
 
@@ -62,4 +62,4 @@ int main()
     printWordsInTrie(root);
 
     return 0;
-}
+}*/
