@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1451329142 source:c:\users\sandy\desktop\cps-8\sandeep\trie\trie.cpp
+	"trie.h"
+	<stdlib.h>
+
+1451329590 source:c:\users\sandy\desktop\cps-8\sandeep\trie\main.cpp
+	<iostream>
+	"trie.h"
+	<cstdio>
+
+1451329133 c:\users\sandy\desktop\cps-8\sandeep\trie\trie.h
+	<stdlib.h>
+
+1451355828 source:c:\users\vinee_000\cps-8\sandeep\trie\main.cpp
+	<iostream>
+	"trie.h"
+
+1451355828 c:\users\vinee_000\cps-8\sandeep\trie\trie.h
+	<stdlib.h>
+

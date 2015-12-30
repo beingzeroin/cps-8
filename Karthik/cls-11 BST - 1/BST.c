@@ -98,3 +98,33 @@ BSTNode *delteBSTNode(BSTNode *root, ElementType data)
     }
     return root;
 }
+BSTNode *delteBSTNode2(BSTNode *root, ElementType data)
+{
+    if(root==NULL)
+        return NULL;
+
+    BSTNode *temp=root,*prev=NULL;
+    while(temp->data!=data)
+    {
+        if(data<temp->data)
+        {
+            prev=temp;
+            temp=temp->left;
+        }
+        if(data>temp->data)
+        {
+            prev=temp;
+            temp=temp->right;
+        }
+    }
+    if(temp->left==NULL && temp->right==NULL)
+    {
+        temp=NULL;
+        if(prev->right!=NULL)
+            prev->left=NULL;
+        else if(prev->left!=NULL)
+            prev->right=NULL;
+    }
+    //printf("%d",prev->data);
+    return root ;
+}

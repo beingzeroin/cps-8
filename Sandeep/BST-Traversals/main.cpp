@@ -2,6 +2,11 @@
 #include <cstdlib>
 #include "BST.h"
 #include<assert.h>
+#include <queue>
+using namespace std;
+
+// Forward Declaration
+
 
 int unitTests()
 {
@@ -32,8 +37,20 @@ int unitTests()
     return 0;
 }
 
+
 int main()
 {
+    BSTNode *r = createRandomBST(11, 100);
+    print_ascii_tree(r);
+    //iterativePreorder(r);
+    //iterativeInorder(r);
+    iterativePostrder(r);
+
+    assert(hasSum(r, 292)==true);
+    assert(hasSum(r, 67)==false);
+
+    levelOrderSpiral(r);
 
     return 0;
 }
+
