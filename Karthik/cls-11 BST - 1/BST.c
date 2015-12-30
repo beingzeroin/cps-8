@@ -58,14 +58,14 @@ BSTNode *insertBSTNode(BSTNode *root, ElementType data)
     return root;
 }
 
-BSTNode *delteBSTNode(BSTNode *root, ElementType data)
+BSTNode *deleteBSTNode(BSTNode *root, ElementType data)
 {
     if(root==NULL)
         return root;
     if(data<root->data)
-        root->left=delteBSTNode(root->left,data);
+        root->left=deleteBSTNode(root->left,data);
     else if(data>root->data)
-        root->right=delteBSTNode(root->right,data);
+        root->right=deleteBSTNode(root->right,data);
     else if(data==root->data)
     {
         if(root->left==NULL && root->right!=NULL)
@@ -88,7 +88,7 @@ BSTNode *delteBSTNode(BSTNode *root, ElementType data)
             while(temp->right!=NULL)
                 temp=temp->right;
             root->data=temp->data;
-            return delteBSTNode(root->left,temp->data);
+            return deleteBSTNode(root->left,temp->data);
         }
         else if(root->right==NULL && root->left==NULL)
         {

@@ -1,49 +1,28 @@
 #include <stack>
-#include"BST.h"
-#include <cstdlib>
-#include <cstdio>
+#include "BST.h"
+#include<queue>
 using namespace std;
 
-void iterativePreOrder(BSTNode *r)
+void levelorder(BSTNode *r)
 {
-    stack<BSTNode*> mystack;
-    while(1)
+    BSTNode *t;
+    queue<BSTNode*> myq;
+    if(root==NULL)
+        return ;
+    else
     {
-        while(r!=NULL)
-        {
-            printf("%d", r->data);
-            mystack.push(r);
-            r=r->left;
-        }
-        if(mystack.empty())
-            break;
-        r = mystack.top();
-        mystack.pop();
-        r = r->right;
+        myq.push(root);
+        if(r->left!=NULL)
+            myq.push(r->left);
+        if(r->right!=NULL)
+            myq.push(r->right);
+
     }
-}
-
-void iterativeInOrder(BSTNode *r)
-{
-    stack<BSTNode*> mystack;
-    while(1)
-    {
-        while(r!=NULL)
-        {
-            mystack.push(r);
-            r=r->left;
-        }
-        if(mystack.empty())
-            break;
-        r = mystack.top();
-        printf("%d", r->data);
-        mystack.pop();
-        r = r->right;
-    }
-}
-
-void iterativePostOrder(BSTNode *r)
-{
+    if(myq.empty())
+        return ;
+    t=myq.front();
+    myq.pop();
+    printf("%d ",t->data);
+    levelorder(myq.front());
 
 }
-
