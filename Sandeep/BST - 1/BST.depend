@@ -1,10 +1,58 @@
 # depslib dependency file v1.0
-1450838535 source:c:\users\dell 15\cps-8\sandeep\bst - 1\printbinarytree.c
+<<<<<<< HEAD
+1450841582 source:c:\users\dell\cps-8\sandeep\bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450838548 c:\users\dell\cps-8\sandeep\bst - 1\bst.h
+
+1450838548 source:c:\users\dell\cps-8\sandeep\bst - 1\printbinarytree.c
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+1450925848 source:c:\users\sanjay katta\desktop\cps-8\sandeep\bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450838582 c:\users\sanjay katta\desktop\cps-8\sandeep\bst - 1\bst.h
+
+1450924580 source:c:\users\sanjay katta\desktop\cps-8\sandeep\bst - 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BST.h"
+	<assert.h>
+
+1450838582 source:c:\users\sanjay katta\desktop\cps-8\sandeep\bst - 1\printbinarytree.c
 	"BST.h"
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
+1450838450 source:c:\users\ravichandra\cps-8\sandeep\bst - 1\printbinarytree.c
+=======
+1450838535 source:c:\users\dell 15\cps-8\sandeep\bst - 1\printbinarytree.c
+>>>>>>> cc18206aa627d8a76700b20568b8271e4b17958e
+>>>>>>> f10639280898ac47b57ee316c0497dfeed0d4ccf
+	"BST.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+<<<<<<< HEAD
+1450851386 source:c:\users\dell\cps-8\sandeep\bst - 1\main.c
+=======
+<<<<<<< HEAD
+1450838450 c:\users\ravichandra\cps-8\sandeep\bst - 1\bst.h
+
+1450924388 source:c:\users\ravichandra\cps-8\sandeep\bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
+=======
 1450838535 c:\users\dell 15\cps-8\sandeep\bst - 1\bst.h
 
 1450925500 source:c:\users\dell 15\cps-8\sandeep\bst - 1\bst.c
@@ -12,7 +60,16 @@
 	<stdlib.h>
 
 1450925375 source:c:\users\dell 15\cps-8\sandeep\bst - 1\main.c
+>>>>>>> f10639280898ac47b57ee316c0497dfeed0d4ccf
 	<stdio.h>
 	<stdlib.h>
 	"BST.h"
 
+<<<<<<< HEAD
+=======
+>>>>>>> cc18206aa627d8a76700b20568b8271e4b17958e
+<<<<<<< HEAD
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
+=======
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
+>>>>>>> f10639280898ac47b57ee316c0497dfeed0d4ccf

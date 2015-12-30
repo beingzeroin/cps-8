@@ -3,18 +3,24 @@
 	"BST.h"
 	<stdlib.h>
 
-1450926776 c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.h
+1451271410 c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.h
+	<stdbool.h>
 
-1450925413 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.cpp
+1451270537 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\bst.cpp
 	"BST.h"
 	<stdlib.h>
-
-1450926184 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\main.cpp
-	<stdio.h>
-	<stdlib.h>
-	"BST.h"
 	<assert.h>
 
+1451271420 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\main.cpp
+	<stdio.h>
+	<cstdlib>
+	"BST.h"
+	<assert.h>
+	<queue>
+
+1450929788 D
+
+<<<<<<< HEAD
 1450928219 D
 
 1450909254 source:c:\users\rahack\onedrive\cps-8\sandeep\bst-traversals\bst.cpp
@@ -25,6 +31,8 @@
 
 1450909689 source:c:\users\rahack\onedrive\cps-8\sandeep\bst-traversals\main.cpp
 
+=======
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
 1450926436 source:c:\users\welcome\desktop\cps-8\sandeep\bst-traversals\bst.cpp
 	"BST.h"
 	<stdlib.h>
@@ -41,6 +49,18 @@
 	<stdio.h>
 	<string.h>
 
+<<<<<<< HEAD
+=======
+1451271442 source:c:\users\sandy\desktop\cps-8\sandeep\bst-traversals\traversals.cpp
+	<stack>
+	"BST.h"
+	<cstdlib>
+	<cstdio>
+	<queue>
+
+1450927928 
+
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
 1450928219 source:c:\users\welcome\desktop\cps-8\sandeep\bst-traversals\main.cpp
 
 1450927928 743db0544a685597f1a1cf5ec5b09fd15ee2e
@@ -69,3 +89,8 @@
 	<stdio.h>
 	"BST.h"
 
+<<<<<<< HEAD
+=======
+1450927928 743db0544a685597f1a1cf5ec5b09fd15ee2e
+
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec

@@ -16,14 +16,28 @@
 	"BST.h"
 	<stdlib.h>
 
+<<<<<<< HEAD
 1451249793 source:c:\users\rahack\onedrive\cps-8\karthik\cls-11 bst - 1\main.c
+=======
+1450967015 source:e:\cps-8\karthik\cls-11 bst - 1\bst.c
+	"BST.h"
+	<stdlib.h>
+
+1450965173 e:\cps-8\karthik\cls-11 bst - 1\bst.h
+
+1450966970 source:e:\cps-8\karthik\cls-11 bst - 1\main.c
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
 	<stdio.h>
 	<stdlib.h>
 	"BST.h"
 
+<<<<<<< HEAD
 1451249775 c:\users\rahack\onedrive\cps-8\karthik\cls-11 bst - 1\bst.h
 
 1450823421 source:c:\users\rahack\onedrive\cps-8\karthik\cls-11 bst - 1\printbinarytree.c
+=======
+1450873229 source:e:\cps-8\karthik\cls-11 bst - 1\printbinarytree.c
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
 	"BST.h"
 	<stdlib.h>
 	<stdio.h>

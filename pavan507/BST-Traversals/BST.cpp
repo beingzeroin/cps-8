@@ -1,6 +1,9 @@
 #include "BST.h"
 #include <stdlib.h>
+#include<stdbool.h>
+#include<stdio.h>
 
+int k=1,m=-1;
 BSTNode *createBSTNode(ElementType data)
 {
     BSTNode *temp=(BSTNode*)malloc(sizeof(BSTNode));
@@ -104,7 +107,7 @@ BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data)
     return root;
 }
 
-BSTNode *deleteBSTNode(BSTNode *root, ElementType data)
+/*BSTNode *deleteBSTNode(BSTNode *root, ElementType data)
 {
     BSTNode *c;
     //BSTNode *temp=root;
@@ -140,7 +143,63 @@ BSTNode *deleteBSTNode(BSTNode *root, ElementType data)
         }
     }
 
+<<<<<<< HEAD
     return root;
+=======
+        return root;
+}*/
+BSTNode* deleteBSTNode(BSTNode *root,ElementType data)
+{
+    BSTNode *c=NULL;
+    if(root==NULL)
+        return NULL;
+    if(data<root->data)
+        root->left=deleteBSTNode(root->left,data);
+    else if(data>root->data)
+        root->right=deleteBSTNode(root->right,data);
+    else
+    {
+        if(root->left==NULL&&root->right==NULL)
+        {
+            free(root);
+            return NULL;
+        }
+        else if(root->left==NULL&&root->right!=NULL)
+        {
+            c=root->right;
+            free(root);
+            return c;
+
+        }
+        else if(root->right==NULL&&root->left!=NULL)
+        {
+            c=root->left;
+            free(root);
+            return c;
+        }
+        else{
+          c=minNode(root->right);
+     // printf("%d ",c->data);
+        root->data=c->data;
+        root->right=deleteBSTNode(root->right,c->data);
+
+        }
+
+
+
+    }
+    return root;
+
+
+}
+BSTNode *minNode(BSTNode *r)
+{
+    while(r->left!=NULL)
+    r=r->left;
+    //printf("%d ",r->data);
+    return r;
+
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
 }
 
 BSTNode *searchBSTNode(BSTNode *root, ElementType data)
@@ -155,6 +214,31 @@ BSTNode *searchBSTNode(BSTNode *root, ElementType data)
         return searchBSTNode(root->left,data);
     else
         return searchBSTNode(root->right,data);
+}
+bool isBST(BSTNode *r)
+{
+    if(r==NULL)
+        return true;
+    isBST(r->left);
+    if(r->data>m)
+        m=r->data;
+    else
+    {
+        k=0;
+        return false;
+    }
+    isBST(r->right);
+    return true;
+}
+bool hasSum(BSTNode *r,int sum)
+{
+    if(r==NULL)
+    {
+        return(sum==0);
+
+    }
+    int temp=sum-r->data;
+    return(hasSum(r->right,temp)||hasSum(r->left,temp));
 }
 
 bool hasSum(BSTNode *r, int sum)
