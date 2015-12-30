@@ -14,7 +14,7 @@ struct tnode
 TNode *createTrieNode();
 bool insertWordInTrie(TNode *root, char *word);
 void printWordsInTrie(TNode *root);
-bool rinsertWordInTrie(TNode * roo,char *word);
-
-
+bool rinsertWordInTrie(TNode *root, char *word);
+bool deleteWordFromTrie(TNode *root, char *word);
+void itprintWordsInTrie(TNode *root);
 #endif // TRIE_H_INCLUDED
