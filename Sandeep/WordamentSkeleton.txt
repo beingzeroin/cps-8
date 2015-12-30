@@ -1,0 +1,24 @@
+#define	N	4
+char board[N][N];
+bool visited[N][N];
+char word[N*N+1];
+int idx=0;
+
+void printWordsStartingAt(int i, int j)
+{
+	
+	// Keep board[i][j]
+
+	if(strlen(word)==3)
+		printf("%s", word);
+
+	// for all neighbors of board[i][j] make recursive call	
+
+}
+
+void printAllWords()
+{
+	for all i - 0 to 3
+		for all j - 0 to 3
+			printWordsStartingAt(i, j);
+}
