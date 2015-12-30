@@ -1,13 +1,15 @@
 #ifndef GRAPH_H_INCLUDED
 #define GRAPH_H_INCLUDED
 
+#include "llnode.h"
+
 typedef struct graph Graph;
 
 struct graph
 {
     int nv;
     int ne;
-    LinkedListNode** adjList;
+    LLNode** adjList;
 };
 
 Graph *createGraph(int nv);
