@@ -59,7 +59,11 @@ BSTNode *createRandomBST(int nodeCount, int maxVal)
 {
     int i;
     BSTNode *r = NULL;
+<<<<<<< HEAD
+    for(i=0;i<=nodeCount;i++)
+=======
     for(i=1; i<=nodeCount; i++)
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
         r = insertBSTNode(r, rand()%maxVal);
     return r;
 }
