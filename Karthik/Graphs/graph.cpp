@@ -2,6 +2,9 @@
 #include "llnode.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <queue>
+#include <string.h>
+using namespace std;
 
 Graph *createGraph(int nv)
 {
@@ -42,13 +45,52 @@ void printGraph(Graph *g)
     }
 }
 
-void dfs(Graph *g)
+void dfsInternal(Graph *g,int v,bool visited[])
 {
-
+    if(visited[v])
+        return;
+    printf("%d ",v);
+    visited[v]=true;
+    LLNode *t;
+    for(t=g->adjList[v];t!=NULL;t=t->next)
+        dfsInternal(g,t->data,visited);
 }
-void bfs(Graph *g)
+void dfs(Graph *g,int v)
 {
+    bool visited[g->nv];
+    memset(visited,false,sizeof(visited));
 
+    dfsInternal(g,v,visited);
+}
+void bfs(Graph *g,int v)
+{
+    bool visited[g->nv];
+    memset(visited,false,sizeof(visited));
+    //int i=0;
+    queue<int> myQ;
+    myQ.push(v);
+    visited[v]=true;
+    printf("\n");
+    while(!myQ.empty())
+    {
+        //for(i=0;i<myQ.size();i++)
+        //{
+            int temp=myQ.front();
+            LLNode *tempNode=g->adjList[temp];
+            printf("%d ",temp);
+            myQ.pop();
+            //tempNode=tempNode->next;
+           while(tempNode!=NULL)
+            {
+                if(visited[tempNode->data]==false)
+                {
+                    myQ.push(tempNode->data);
+                    visited[temp]=true;
+                }
+                tempNode=tempNode->next;
+            }
+        //}
+    }
 }
 
 void printPath(Graph *g, int s, int d)

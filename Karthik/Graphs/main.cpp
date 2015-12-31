@@ -18,5 +18,7 @@ int main()
 
     printGraph(g);
 
+    bfs(g,2);
+
     return 0;
 }
