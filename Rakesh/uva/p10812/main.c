@@ -9,7 +9,7 @@ int main()
     while(n>0)
     {
         scanf("%lli %lli",&sum,&diff);
-        if(sum<diff)printf("impossible\n");
+        if(sum<diff || (sum+diff)%2!=0)printf("impossible\n");
         else
             printf("%lld %lld\n",(sum+diff)/2,(sum-diff)/2);
         n--;
