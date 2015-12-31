@@ -1,71 +1,69 @@
 #include <stdio.h>
 #include <stdlib.h>
-typedef struct list List;
-List* createNode(char [],List*);
-typedef struct output Output;
-struct list
+#include <stdbool.h>
+#include <string.h>
+typedef struct countries CL;
+int totallines=0;
+struct countries
 {
-    char name[75];
-    List* next;
-};
-struct output
-{
-    char countryname[75];
+    char cname[75];
     int count;
-    Output* next;
 };
+CL* list[2000];
+int getIndex(char* c)
+{
+    int i;
+    for(i=0; i<totallines; i++)
+    {
+        if(strcmp(list[i]->cname,c)==0)
+            return i;
+    }
+    return -1;
+}
+void sort()
+{
+    int i,j,k;
+    char c[75];
+    for(i=0; i<totallines; i++)
+        for(j=i+1; j<totallines; j++)
+        {
+            if(strcmp(list[i]->cname,list[j]->cname)>0)
+            {
+                strcpy(c,list[i]->cname);
+                strcpy(list[i]->cname,list[j]->cname);
+                strcpy(list[j]->cname,c);
+                k=list[i]->count;
+                list[i]->count=list[j]->count;
+                list[j]->count=k;
+            }
+        }
+}
 int main()
 {
-    int n=0,i=0,j=0;
-    char a[75];
-    List* head=NULL;
+    int n=0,i=0,j=0,index;
+    char line[75];
+    char cn[75];
     scanf("%d",&n);
-    fflush(stdin);
-    gets(a);
-    head=malloc(sizeof(List));
-    for(i=0; a[i]!='\0'; i++)
+    for(i=0; i<n; i++)
     {
-        head->name[i]=a[i];
-    }
-    head->next=NULL;
-    for(i=1; i<n; i++)
-    {
-        head=createNode(gets(a),head);
-    }
-    Output* olist=NULL,*olist_;
-    olist=malloc(sizeof(Output));
-    olist_=olist;
-    while(head!=NULL)
-    {
-        if(olist==NULL)
+        fflush(stdin);
+        gets(line);
+        sscanf(line,"%s",cn);
+        index=getIndex(cn);
+        if(index!=-1)
+            (list[index]->count)++;
+        else
         {
-            olist=malloc(sizeof(Output));
+            list[j]= malloc(sizeof(CL));
+            strcpy(list[j]->cname,cn);
+            list[j]->count=1;
+            j++;
+            totallines=j;
         }
-            j=0;i=0;
-            while(head->name[i]==' ') i++;
-            for(; head->name[i]!=' '; i++,j++)
-            {
-                olist->countryname[j]=head->name[i];
-            }
-            olist->next=NULL;
-            olist=olist->next;
-            head=head->next;
     }
-    for(; olist_!=NULL; olist_=olist_->next)
-    {
-        puts(olist_->countryname);
-    }
+    sort();
+    for(i=0;i<totallines;i++)
+        printf("%s %d\n",list[i]->cname,list[i]->count);
     return 0;
-}
-List* createNode(char a[],List* head)
-{
-    int i=0;
-    List* node=malloc(sizeof(List));
-    for(i=0; a[i]!='\0'; i++)
-    {
-        node->name[i]=a[i];
-    }
-    node->next=head;
-    return node;
 }
 

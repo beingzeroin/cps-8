@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1450251966 source:d:\programming\beingzero\uva judge\tic tac toe\main.c
-	<stdio.h>
-	<stdlib.h>
-	<stdbool.h>
-
