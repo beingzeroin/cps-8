@@ -7,6 +7,7 @@ void calculateMaxCycleLength(unsigned int,unsigned int);
 int main()
 {
     unsigned int i,j;
+
     while(scanf("%d %d",&i,&j)==2)
     {
         if(i<j)
