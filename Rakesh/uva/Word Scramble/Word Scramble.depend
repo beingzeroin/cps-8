@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1450206672 source:d:\programming\beingzero\uva judge\word scramble\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

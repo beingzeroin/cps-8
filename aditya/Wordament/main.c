@@ -13,46 +13,53 @@ void getWordsStartingFrom(int x,int y,int last, bool visited[4][4]);
 void createDictionary();
 void initializeVisited(bool visited[4][4]);
 
-int main(){
+int main()
+{
     createDictionary();
     int i;
     printf("Enter 4X4 matrix : \n\n");
-    for(i = 0;i < 4;i++)
+    for(i = 0; i < 4; i++)
         scanf("%s",board[i]);
     generateWords();
     return 0;
 }
-void createDictionary(){
+void createDictionary()
+{
     myTrie = createTrieNode();
-    FILE *fp = fopen("C:\\Users\\ch.aditya\\Desktop\\Wordament\\dictionary.txt", "r");
+    FILE *fp = fopen("dictionary.txt", "r");
     assert(fp != NULL);
-    while(!feof(fp)){
+    while(!feof(fp))
+    {
         char word[100];
         fscanf(fp,"%s",word);
         insertWordTrie(myTrie,word);
     }
     fclose(fp);
 }
-void generateWords(){
+void generateWords()
+{
     int i, j;
     bool visited[4][4];
     word = malloc(17*sizeof(char));
     printf("\nWords are : \n\n");
-    for(i = 0;i < 4;i++)
-        for(j = 0;j < 4;j++){
+    for(i = 0; i < 4; i++)
+        for(j = 0; j < 4; j++)
+        {
             word[0] = '\0';
             initializeVisited(visited);
             getWordsStartingFrom(i,j,0,visited);
         }
     free(word);
 }
-void initializeVisited(bool visited[4][4]){
+void initializeVisited(bool visited[4][4])
+{
     int i, j;
-    for(i = 0;i < 4;i++)
-        for(j = 0;j < 4;j++)
+    for(i = 0; i < 4; i++)
+        for(j = 0; j < 4; j++)
             visited[i][j] = false;
 }
-void getWordsStartingFrom(int x,int y,int last, bool visited[4][4]){
+void getWordsStartingFrom(int x,int y,int last, bool visited[4][4])
+{
     visited[x][y] = true;
 
     word[last] = board[x][y];

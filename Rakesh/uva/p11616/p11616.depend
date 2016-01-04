@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1451128585 source:d:\programming\beingzero\uva judge\p11616\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

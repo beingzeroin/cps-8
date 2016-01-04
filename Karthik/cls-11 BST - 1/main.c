@@ -17,7 +17,11 @@ int main()
     print_ascii_tree(root);
 
     // Delete Root
+<<<<<<< HEAD
+    root = deleteBSTNode(root, 5);
+=======
     root = delteBSTNode2(root, 1);
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
 
     print_ascii_tree(root);
 

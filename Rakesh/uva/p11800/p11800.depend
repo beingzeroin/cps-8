@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1451502972 source:d:\programming\beingzero\uva judge\p11800\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1451546561 source:d:\programming\beingzero\cps-8\rakesh\uva\p11800\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
