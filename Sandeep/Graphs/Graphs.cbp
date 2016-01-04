@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="graph.cpp" />
+		<Unit filename="graph.h" />
+		<Unit filename="llnode.cpp" />
+		<Unit filename="llnode.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

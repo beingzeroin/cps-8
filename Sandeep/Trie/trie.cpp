@@ -33,7 +33,6 @@ bool rinsertWordInTrie(TNode *root, char *word)
 }
 bool insertWordInTrie(TNode *root, char *word)
 {
-<<<<<<< HEAD
     for(i=0;word[i]!='\0';i++)
     {
         int idx=word[i]-'a';
@@ -47,7 +46,7 @@ bool insertWordInTrie(TNode *root, char *word)
     return true;
 }
 chr str[100];
-int stri;
+int stri=0;
 
 void printWordsInTrie(TNode *root)
 {
@@ -61,7 +60,6 @@ void printWordsInTrie(TNode *root)
         {
             char c=i+'a';
             str[stri]=c;
-=======
     for(int i=0;word[i]!='\0';i++)
     {
         int idx = word[i]-'a';
@@ -88,12 +86,10 @@ void printWordsInTrie(TNode *root)
         {
             char c = i + 'a';
             str[stri] = c;
->>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
             stri++;
             str[stri]='\0';
             printWordsInTrie(root->next[i]);
             stri--;
-<<<<<<< HEAD
             str[stri]='\0';
         }
 
@@ -112,7 +108,6 @@ bool deleteWordFormTrie(TNode *root,char *word)
         if(isLeaf(root))
     }
 
-=======
             str[stri] = '\0';
         }
     }
@@ -148,7 +143,6 @@ bool deleteWordFromTrie(TNode *root, char *word)
         }
 
     }
->>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
 
     int idx = word[0] - 'a';
     if(deleteWordFromTrie(root->next[idx], word+1))
