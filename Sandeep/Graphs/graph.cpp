@@ -94,8 +94,26 @@ void bfs(Graph *g,int v)
 
 
 }
+int pathBetweenNodes[500];
+bool visited[100];
+int idx;
 
 void printPath(Graph *g, int s, int d)
 {
+
+
+    if(s==d)
+    {
+        for()
+    }
+
+
+
+        LLNode *t;
+    for(t=adjList[s];t!=NULL;t=t->next)
+    {
+        printPath(g,t->data,d);
+    }
+    idx--;
 
 }
