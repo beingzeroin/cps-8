@@ -17,8 +17,18 @@ int main()
     //insertEdge(g, 6, 7);
 
     printGraph(g);
+<<<<<<< HEAD
+    printf("BFS: ");
+    bfs(g);
+    printf("\nDFS: ");
+    dfs(g);
+=======
     dfs(g,0);
         printGraph(g);
+>>>>>>> 59f32ad7baaafa31e6e69aef0e2f32642bc10e86
 
+    printPath(g, 0, 5);
+    // 0->4->5
+    // 0->3->1->5
     return 0;
 }
