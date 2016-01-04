@@ -1,0 +1,144 @@
+Case 1: Square
+Case 2: Square
+Case 3: Square
+Case 4: Square
+Case 5: Square
+Case 6: Square
+Case 7: Square
+Case 8: Square
+Case 9: Square
+Case 10: Square
+Case 11: Square
+Case 12: Square
+Case 13: Square
+Case 14: Square
+Case 15: Square
+Case 16: Square
+Case 17: Square
+Case 18: Square
+Case 19: Square
+Case 20: Square
+Case 21: Square
+Case 22: Square
+Case 23: Square
+Case 24: Square
+Case 25: Rectangle
+Case 26: Rectangle
+Case 27: Rectangle
+Case 28: Rectangle
+Case 29: Rectangle
+Case 30: Rectangle
+Case 31: Rectangle
+Case 32: Rectangle
+Case 33: Rectangle
+Case 34: Rectangle
+Case 35: Rectangle
+Case 36: Rectangle
+Case 37: Rectangle
+Case 38: Rectangle
+Case 39: Rectangle
+Case 40: Rectangle
+Case 41: Rectangle
+Case 42: Rectangle
+Case 43: Rectangle
+Case 44: Rectangle
+Case 45: Rectangle
+Case 46: Rectangle
+Case 47: Rectangle
+Case 48: Rectangle
+Case 49: Rhombus
+Case 50: Rhombus
+Case 51: Rhombus
+Case 52: Rhombus
+Case 53: Rhombus
+Case 54: Rhombus
+Case 55: Rhombus
+Case 56: Rhombus
+Case 57: Rhombus
+Case 58: Rhombus
+Case 59: Rhombus
+Case 60: Rhombus
+Case 61: Rhombus
+Case 62: Rhombus
+Case 63: Rhombus
+Case 64: Rhombus
+Case 65: Rhombus
+Case 66: Rhombus
+Case 67: Rhombus
+Case 68: Rhombus
+Case 69: Rhombus
+Case 70: Rhombus
+Case 71: Rhombus
+Case 72: Rhombus
+Case 73: Parallelogram
+Case 74: Parallelogram
+Case 75: Parallelogram
+Case 76: Parallelogram
+Case 77: Parallelogram
+Case 78: Parallelogram
+Case 79: Parallelogram
+Case 80: Parallelogram
+Case 81: Parallelogram
+Case 82: Parallelogram
+Case 83: Parallelogram
+Case 84: Parallelogram
+Case 85: Parallelogram
+Case 86: Parallelogram
+Case 87: Parallelogram
+Case 88: Parallelogram
+Case 89: Parallelogram
+Case 90: Parallelogram
+Case 91: Parallelogram
+Case 92: Parallelogram
+Case 93: Parallelogram
+Case 94: Parallelogram
+Case 95: Parallelogram
+Case 96: Parallelogram
+Case 97: Trapezium
+Case 98: Trapezium
+Case 99: Trapezium
+Case 100: Trapezium
+Case 101: Trapezium
+Case 102: Trapezium
+Case 103: Trapezium
+Case 104: Trapezium
+Case 105: Trapezium
+Case 106: Trapezium
+Case 107: Trapezium
+Case 108: Trapezium
+Case 109: Trapezium
+Case 110: Trapezium
+Case 111: Trapezium
+Case 112: Trapezium
+Case 113: Trapezium
+Case 114: Trapezium
+Case 115: Trapezium
+Case 116: Trapezium
+Case 117: Trapezium
+Case 118: Trapezium
+Case 119: Trapezium
+Case 120: Trapezium
+Case 121: Ordinary Quadrilateral
+Case 122: Ordinary Quadrilateral
+Case 123: Ordinary Quadrilateral
+Case 124: Ordinary Quadrilateral
+Case 125: Ordinary Quadrilateral
+Case 126: Ordinary Quadrilateral
+Case 127: Ordinary Quadrilateral
+Case 128: Ordinary Quadrilateral
+Case 129: Ordinary Quadrilateral
+Case 130: Ordinary Quadrilateral
+Case 131: Ordinary Quadrilateral
+Case 132: Ordinary Quadrilateral
+Case 133: Ordinary Quadrilateral
+Case 134: Ordinary Quadrilateral
+Case 135: Ordinary Quadrilateral
+Case 136: Ordinary Quadrilateral
+Case 137: Ordinary Quadrilateral
+Case 138: Ordinary Quadrilateral
+Case 139: Ordinary Quadrilateral
+Case 140: Ordinary Quadrilateral
+Case 141: Ordinary Quadrilateral
+Case 142: Ordinary Quadrilateral
+Case 143: Ordinary Quadrilateral
+Case 144: Ordinary Quadrilateral

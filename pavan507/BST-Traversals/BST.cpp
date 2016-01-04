@@ -143,6 +143,9 @@ BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data)
         }
     }
 
+<<<<<<< HEAD
+    return root;
+=======
         return root;
 }*/
 BSTNode* deleteBSTNode(BSTNode *root,ElementType data)
@@ -196,6 +199,7 @@ BSTNode *minNode(BSTNode *r)
     //printf("%d ",r->data);
     return r;
 
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
 }
 
 BSTNode *searchBSTNode(BSTNode *root, ElementType data)
@@ -237,4 +241,16 @@ bool hasSum(BSTNode *r,int sum)
     return(hasSum(r->right,temp)||hasSum(r->left,temp));
 }
 
+bool hasSum(BSTNode *r, int sum)
+{
+
+    bool lhasSum = hasSum(r->left, sum - r->data);
+    if(lhasSum)
+        return true;
+    bool rhasSum = hasSum(r->right, sum - r->data);
+    if(rhasSum)
+        return true;
+    else
+        return false;
+}
 
