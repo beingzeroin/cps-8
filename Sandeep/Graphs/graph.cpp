@@ -192,6 +192,11 @@ void bfs(Graph *g,int v)
         }
     }
 }
+<<<<<<< HEAD
+int pathBetweenNodes[500];
+bool visited[100];
+int idx;
+=======
 void bfs(Graph *g)
 {
     queue<int> q;
@@ -213,6 +218,7 @@ void bfs(Graph *g)
             {
                 printf("%d ", q.front());
                 q.pop();
+>>>>>>> 6fd26ef8bca61539cf09865443377c3796d0b50a
 
                 for(LLNode *t=g->adjList[i]; t!=NULL; t=t->next)
                 {
@@ -244,6 +250,23 @@ void printPath(Graph *g, int s, int d)
             else
                 printf("->%d", pathBetweenNodes[i]);
 
+<<<<<<< HEAD
+
+    if(s==d)
+    {
+        for()
+    }
+
+
+
+        LLNode *t;
+    for(t=adjList[s];t!=NULL;t=t->next)
+    {
+        printPath(g,t->data,d);
+    }
+    idx--;
+
+=======
         }
         printf("->%d", d);
         return;
@@ -261,4 +284,5 @@ void printPath(Graph *g, int s, int d)
     }
     pathIdx--;
     visited[s] = false;
+>>>>>>> 6fd26ef8bca61539cf09865443377c3796d0b50a
 }

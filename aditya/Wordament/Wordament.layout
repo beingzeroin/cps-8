@@ -2,7 +2,16 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 <<<<<<< HEAD
+	<File name="main.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="321" topLine="62" />
+		</Cursor>
+	</File>
+	<File name="trie.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+=======
+<<<<<<< HEAD
 	<File name="trie.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+>>>>>>> 82fa6e719a18b02110339093b71e7bc1d1e695cd
 		<Cursor>
 			<Cursor1 position="217" topLine="0" />
 =======
@@ -18,6 +27,8 @@
 		</Cursor>
 	</File>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2193" topLine="55" />
@@ -28,4 +39,5 @@
 >>>>>>> 59f32ad7baaafa31e6e69aef0e2f32642bc10e86
 		</Cursor>
 	</File>
+>>>>>>> 82fa6e719a18b02110339093b71e7bc1d1e695cd
 </CodeBlocks_layout_file>
