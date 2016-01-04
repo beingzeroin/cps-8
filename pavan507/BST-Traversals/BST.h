@@ -31,11 +31,15 @@ void levelOrderTraversal(BSTNode *r);
 void iterativePostorder(BSTNode *r);
 void iterativePreorder(BSTNode *r);
 void recursivPreorder(BSTNode *r);
+<<<<<<< HEAD
+bool hasSum(BSTNode *r, int sum);
+=======
 void printPath(BSTNode *r);
 void printRecursively(BSTNode *r,int path[],int pathlen);
 void printPathArray(int path[],int pathlen);
 bool hasSum(BSTNode *r,int sum);
 void iterativePreorder(BSTNode *r);
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
 
 
 #endif // BST_H_INCLUDED

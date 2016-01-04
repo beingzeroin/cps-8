@@ -34,9 +34,19 @@
 		</Compiler>
 		<Unit filename="BST.cpp" />
 		<Unit filename="BST.h" />
-		<Unit filename="Traversals.cpp" />
+<<<<<<< HEAD
+<<<<<<< HEAD
 		<Unit filename="main.cpp" />
 		<Unit filename="printBinaryTree.cpp" />
+		<Unit filename="traversals.cpp" />
+=======
+		<Unit filename="bstTraversals.cpp" />
+=======
+		<Unit filename="Traversals.cpp" />
+>>>>>>> 0ca016ec24f51ba2268fe2a0d407019a5c3452ec
+		<Unit filename="main.cpp" />
+		<Unit filename="printBinaryTree.cpp" />
+>>>>>>> 976743db0544a685597f1a1cf5ec5b09fd15ee2e
 		<Extensions>
 			<code_completion />
 			<envvars />
