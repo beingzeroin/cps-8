@@ -112,6 +112,66 @@ void rlevelOrderTraversal(BSTNode *r)
     levelOrderTraversal(r->left);
     levelOrderTraversal(r->right);
 
+
+}
+bool isLeaf(BSTNode *r)
+{
+    if(r==NULL)
+        return false;
+    return r->left==NULL && r->left==NULL;
+}
+bool hasSum(BSTNode *r,int sum)
+{
+    if(r==NULL&&sum==0)
+    {
+        return true;
+    }
+    if(r==NULL||sum==0)
+    {
+        return false;
+    }
+    else
+    {
+        return hasSum(r->left, sum - r->data);
+        return hasSum(r->right, sum - r->data);
     }
 }
 
+void levelOrderSpiral(BSTNode *r)
+{
+    if(r==NULL)
+        return;
+    queue<BSTNode *> q;
+    q.push(r);
+    q.push(NULL);
+    bool rtl = true;
+    BSTNode *c;
+    while(!q.empty())
+    {
+        c = q.front();
+        q.pop();
+        if(c==NULL)
+        {
+            rtl = !rtf;
+            q.push(NULL);
+        }
+        else
+        {
+            printf("%d ",c->data);
+            if(rtl)
+            {
+                if(c->right)
+                    q.push(c->right);
+                if(c->left)
+                    q.push(c->left);
+            }
+            else
+            {
+                if(c->left)
+                    q.push(c->left);
+                if(c->right)
+                    q.push(c->right);
+            }
+        }
+    }
+}

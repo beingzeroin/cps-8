@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    Graph *g = createGraph(8);
+    Graph *g = createGraph(10);
 
     insertEdge(g, 0, 4);
     insertEdge(g, 0, 3);

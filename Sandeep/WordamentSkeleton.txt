@@ -16,6 +16,11 @@ void printWordsStartingAt(int i, int j)
 	}
 
 	// for all neighbors of board[i][j] make recursive call	
+	for(r=i-1;r<=i+1;r++)
+		for(c=j-1;c<=j+1;c++)
+			if(isValid(r,c))
+				printWordsStartingAt(r,c);
+				
 
 }
 
@@ -28,9 +33,6 @@ void printAllWords()
 
 
 
-WORDAMENT STATS
-
-0 : 0
 WORDAMENT STATS
 
 0 : 0
@@ -49,4 +51,3 @@ WORDAMENT STATS
 13 : 2644520
 14 : 2250192
 15 : 1260672
-16 : 343184

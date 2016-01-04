@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <cstdlib>
 #include "BST.h"
-#include<assert.h>
-#include<iostream>
-
+#include <assert.h>
+#include <iostream>
+#include <stdbool.h>
 using namespace std;
 
 int unitTests()
@@ -39,6 +39,7 @@ int main()
 {
     BSTNode *root = createRandomBST(11,100);
     print_ascii_tree(root);
-    levelOrderTraversal(root);
+    assert(hasSum(root,75)==0);
+    assert(hasSum(root,41)==1);
     return 0;
 }
