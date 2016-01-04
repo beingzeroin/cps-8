@@ -4,24 +4,41 @@ bool visited[N][N];
 char word[N*N+1];
 int idx=0;
 int count[N*N+1];
+bool isValid(int r,int c)
+{
+	return (r>=0 && r<=3 && c>=0 && c<=3)
+}
 void printWordsStartingAt(int i, int j)
 {
-	
-	// Keep board[i][j]
+	if(visited[i][j])
+		return;
+	if(!isValid(i,j))
+		return;
 
-	if(strlen(word)==3)
+		// Keep board[i][j]
+	word[idx] = board[i][j];
+	idx++;
+	word[idx] = '\0';
+	visited[i][j]  = true;
+
+	// If trie does't have any word with this prefix
+	// BackTrack from here
+	
+	if(strlen(word)>=3 && hasWord(rootTrie, word))
 	{
 		printf("%s", word);
 		count[strlen(word)]++;
 	}
 
 	// for all neighbors of board[i][j] make recursive call	
+	int r, c;
 	for(r=i-1;r<=i+1;r++)
-		for(c=j-1;c<=j+1;c++)
-			if(isValid(r,c))
-				printWordsStartingAt(r,c);
-				
-
+  	 for(c=j-1;c<=j+1;c++)
+		printWordsStartingAt(r,c);
+	
+	visited[i][j] = false;
+	idx--;
+	word[idx] = '\0';
 }
 
 void printAllWords()
