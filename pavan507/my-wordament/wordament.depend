@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1451444934 source:c:\users\welcome\desktop\cps-8\pavan507\wordament\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
+1451837438 source:c:\users\welcome\desktop\cps-8\pavan507\my-wordament\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+

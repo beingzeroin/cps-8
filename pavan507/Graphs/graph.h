@@ -16,7 +16,7 @@ Graph *createGraph(int nv);
 void insertEdge(Graph *g, int u, int v);
 void deleteEdge(Graph *g, int u, int v);
 Graph *destroyGraph(Graph *g);
-
+void dfsInternal(Graph *g,int v,bool visited);
 void printGraph(Graph *g);
 
 void dfs(Graph *g);

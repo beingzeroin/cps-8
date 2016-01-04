@@ -17,6 +17,10 @@ int main()
     insertEdge(g, 6, 7);
 
     printGraph(g);
+    printf("\n");
+    //bfs(g);
+   // dfs(g);
+    printPath(g,0,5);
 
     return 0;
 }

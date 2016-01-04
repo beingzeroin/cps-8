@@ -1,7 +1,18 @@
 # depslib dependency file v1.0
-1451444934 source:c:\users\welcome\desktop\cps-8\pavan507\wordament\main.c
+1451397149 source:c:\users\ch.aditya\desktop\wordament\trie.c
+	<stdlib.h>
+	<assert.h>
+	<stdio.h>
+	<stdbool.h>
+	"trie.h"
+
+1451391036 c:\users\ch.aditya\desktop\wordament\trie.h
+	<stdbool.h>
+
+1451404374 source:c:\users\ch.aditya\desktop\wordament\main.c
 	<stdio.h>
 	<stdlib.h>
-	<string.h>
+	<assert.h>
 	<stdbool.h>
+	"trie.h"
 
