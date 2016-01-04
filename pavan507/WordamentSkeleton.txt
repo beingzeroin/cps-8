@@ -1,0 +1,48 @@
+#define	N	4
+char board[N][N];
+bool visited[N][N];
+char word[N*N+1];
+int idx=0;
+int count[N*N+1];
+void printWordsStartingAt(int i, int j)
+{
+	
+	// Keep board[i][j]
+
+	if(strlen(word)==3)
+	{
+		printf("%s", word);
+		count[strlen(word)]++;
+	}
+
+	// for all neighbors of board[i][j] make recursive call	
+
+}
+
+void printAllWords()
+{
+	for all i - 0 to 3
+		for all j - 0 to 3
+			printWordsStartingAt(i, j);
+}
+
+
+
+WORDAMENT STATS
+
+0 : 0
+1 : 0
+2 : 0
+3 : 408
+4 : 1764
+5 : 6712
+6 : 22672
+7 : 68272
+8 : 183472
+9 : 436984
+10 : 905776
+11 : 1594648
+12 : 2310264
+13 : 2644520
+14 : 2250192
+15 : 1260672

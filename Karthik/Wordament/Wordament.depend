@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1451443793 source:c:\users\beingzero\desktop\cps-8\karthik\wordament\main.c
+	"wordament.cpp"
+
+1451445486 source:c:\users\beingzero\desktop\cps-8\karthik\wordament\wordament.cpp
+	<stdio.h>
+	<string.h>
+	<stdbool.h>
+
+1451445486 c:\users\beingzero\desktop\cps-8\karthik\wordament\wordament.cpp
+	<stdio.h>
+	<string.h>
+	<stdbool.h>
+
