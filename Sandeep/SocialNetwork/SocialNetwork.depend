@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1451879480 source:c:\users\sandy\desktop\cps-8\sandeep\socialnetwork\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<cassert>
+
