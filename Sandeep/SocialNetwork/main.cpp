@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int friendship[20000][2000];
+char friendship[20000][20000];
 char names[20000][100];
 int idx;
 
