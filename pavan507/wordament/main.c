@@ -1,80 +1,82 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
-#include<stdbool.h>
+#include <assert.h>
+#include <stdbool.h>
+#include "trie.h"
 
-#define	N	4
-char board[N][N];
-bool visited[N][N];
-char word[N*N+1];
-int idx=0;
-int count[N*N+1];
-//int r,c;
-bool isValid(int r,int c)
-{
-if(r>=0&&r<=3&&c>=0&&c<=3)
-    return true;
-else
-    return false;
+char board[10][10];
+char *word;
+TNode *myTrie;
 
-}
-void printWordsStartingAt(int i, int j)
-{
-    int r,c;
-	if(visited[i][j]==true)
-        return;
-        if(!isValid(i,j))
-            return;
-    visited[i][j]=true;
-    word[idx]=board[i][j];
-    idx++;
-    word[idx]='\0';
-	// Keep board[i][j]
+void generateWords();
+void getWordsStartingFrom(int x,int y,int last, bool visited[4][4]);
+void createDictionary();
+void initializeVisited(bool visited[4][4]);
 
-
-	if(strlen(word)>=3)
-	{
-		printf("%s\n", word);
-		count[strlen(word)]++;
-		//strcpy(word,"");
-		//return;
-	}
-for(r=i-1;r<=i+1;r++)
-{
-for(c=j-1;c<=j+1;c++)
-
-printWordsStartingAt(r,c);
-
-	// for all neighbors of board[i][j] make recursive call
-
-}
-}
-
-void printAllWords()
-{
-    int i,j;
-	for(i=0;i<=3;i++)
-    {
-		for(j=0;j<=3;j++)
-        {
-			printWordsStartingAt(i, j);
-			visited[i][j]=false;
-			idx--;
-			word[idx]='\0';
-}
-}
-}
-int main()
-{
-int i,j;
-    printf("enter matrix\n");
-    for(i=0;i<=3;i++)
-    {
-        for(j=0;j<=3;j++)
-        scanf("%c",&board[i][j]);
-    }
-    printAllWords();
+int main(){
+    createDictionary();
+    int i;
+    printf("Enter 4X4 matrix : \n\n");
+    for(i = 0;i < 4;i++)
+        scanf("%s",board[i]);
+    generateWords();
     return 0;
 }
+void createDictionary(){
+    myTrie = createTrieNode();
+    FILE *fp = fopen("C:\\Users\\ch.aditya\\Desktop\\Wordament\\dictionary.txt", "r");
+    assert(fp != NULL);
+    while(!feof(fp)){
+        char word[100];
+        fscanf(fp,"%s",word);
+        insertWordTrie(myTrie,word);
+    }
+    fclose(fp);
+}
+void generateWords(){
+    int i, j;
+    bool visited[4][4];
+    word = malloc(17*sizeof(char));
+    printf("\nWords are : \n\n");
+    for(i = 0;i < 4;i++)
+        for(j = 0;j < 4;j++){
+            word[0] = '\0';
+            initializeVisited(visited);
+            getWordsStartingFrom(i,j,0,visited);
+        }
+    free(word);
+}
+void initializeVisited(bool visited[4][4]){
+    int i, j;
+    for(i = 0;i < 4;i++)
+        for(j = 0;j < 4;j++)
+            visited[i][j] = false;
+}
+void getWordsStartingFrom(int x,int y,int last, bool visited[4][4]){
+    visited[x][y] = true;
 
+    word[last] = board[x][y];
+    word[last+1] = '\0';
 
+    if((last+1) >= 3 && hasWord(myTrie,word))
+        printf("%s\n",word);
+
+    if((x-1) >= 0 && !visited[x-1][y])//TOP
+        getWordsStartingFrom(x-1,y,last+1,visited);
+    if(((x-1) >= 0) && ((y+1) < 4) && !visited[x-1][y+1])//TOP-RIGHT
+        getWordsStartingFrom(x-1,y+1,last+1,visited);
+    if((y+1) < 4 && !visited[x][y+1])//RIGHT
+        getWordsStartingFrom(x,y+1,last+1,visited);
+    if(((x+1) < 4) && ((y+1) < 4) && !visited[x+1][y+1])//BOTTOM-RIGHT
+        getWordsStartingFrom(x+1,y+1,last+1,visited);
+    if((x+1) < 4 && !visited[x+1][y])//BOTTOM
+        getWordsStartingFrom(x+1,y,last+1,visited);
+    if(((x+1) < 4) && ((y-1) >= 0) && !visited[x+1][y-1])//BOTTOM-LEFT
+        getWordsStartingFrom(x+1,y-1,last+1,visited);
+    if((y-1) >= 0 && !visited[x][y-1])//LEFT
+        getWordsStartingFrom(x,y-1,last+1,visited);
+    if(((x-1) >= 0) && ((y-1) >= 0) && !visited[x-1][y-1])//TOP-LEFT
+        getWordsStartingFrom(x-1,y-1,last+1,visited);
+
+    visited[x][y] = false;// important
+}
