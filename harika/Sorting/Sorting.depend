@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1441328860 source:c:\users\sandy\desktop\sorting\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"sort.h"
+	<assert.h>
+
+1441328946 c:\users\sandy\desktop\sorting\sort.h
+
+1441328756 source:c:\users\sandy\desktop\sorting\sort.c
+	<assert.h>
+	<stdbool.h>
+
+1452045038 source:c:\users\gauti's\desktop\cps-8\harika\sorting\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"sort.h"
+	<assert.h>
+
+1441328948 c:\users\gauti's\desktop\cps-8\harika\sorting\sort.h
+
+1452045524 source:c:\users\gauti's\desktop\cps-8\harika\sorting\sort.c
+	<assert.h>
+	<stdbool.h>
+
