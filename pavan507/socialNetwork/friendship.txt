@@ -9,6 +9,7 @@ shibu vithala
 shivangi haaroon
 kundir aamod
 mende krishav
+
 suniska akshi
 hrishi qahaar
 kamesh kohir
@@ -178,6 +179,10 @@ drishti ullah
 dondapati niv
 faisal ashvath
 sushim neeladri
+pavan harsha
+harsha seepu
+seepu pench
+
 sumantra kyna
 nirali kareema
 tusharkanti dhanishta
@@ -30593,3 +30598,6 @@ ketav rakshita
 haneefa charisse
 dharmachandra malan
 sartaj divyatheodore
+pavan harsha
+harsha seepu
+seepu pench

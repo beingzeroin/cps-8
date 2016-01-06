@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1451928285 source:c:\users\welcome\desktop\cps-8\pavan507\socialnetwork\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+
