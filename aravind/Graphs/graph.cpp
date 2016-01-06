@@ -69,6 +69,7 @@ void dfs(Graph *g, int v)
     memset(visited, false, sizeof(visited));
     dfsInternal(g, v, visited);
 }
+
 void bfs(Graph *g)
 {
     if(g==NULL)

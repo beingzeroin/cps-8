@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1452048747 source:c:\users\arra\desktop\cps-8\aravind\avl\avl.c
+	<stdlib.h>
+	"avl.h"
+
+1452049261 c:\users\arra\desktop\cps-8\aravind\avl\avl.h
+
+1452049178 source:c:\users\arra\desktop\cps-8\aravind\avl\main.c
+	<stdio.h>
+	<stdlib.h>
+	"avl.c"
+
+1452049260 c:\users\arra\desktop\cps-8\aravind\avl\avl.c
+	<stdlib.h>
+	"avl.h"
+
