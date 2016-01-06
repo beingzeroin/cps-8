@@ -1,0 +1,70 @@
+#define	N	4
+char board[N][N];
+bool visited[N][N];
+char word[N*N+1];
+int idx=0;
+int count[N*N+1];
+bool isValid(int r,int c)
+{
+	return (r>=0 && r<=3 && c>=0 && c<=3)
+}
+void printWordsStartingAt(int i, int j)
+{
+	if(visited[i][j])
+		return;
+	if(!isValid(i,j))
+		return;
+
+		// Keep board[i][j]
+	word[idx] = board[i][j];
+	idx++;
+	word[idx] = '\0';
+	visited[i][j]  = true;
+
+	// If trie does't have any word with this prefix
+	// BackTrack from here
+	
+	if(strlen(word)>=3 && hasWord(rootTrie, word))
+	{
+		printf("%s", word);
+		count[strlen(word)]++;
+	}
+
+	// for all neighbors of board[i][j] make recursive call	
+	int r, c;
+	for(r=i-1;r<=i+1;r++)
+  	 for(c=j-1;c<=j+1;c++)
+		printWordsStartingAt(r,c);
+	
+	visited[i][j] = false;
+	idx--;
+	word[idx] = '\0';
+}
+
+void printAllWords()
+{
+	for all i - 0 to 3
+		for all j - 0 to 3
+			printWordsStartingAt(i, j);
+}
+
+
+
+WORDAMENT STATS
+
+0 : 0
+1 : 0
+2 : 0
+3 : 408
+4 : 1764
+5 : 6712
+6 : 22672
+7 : 68272
+8 : 183472
+9 : 436984
+10 : 905776
+11 : 1594648
+12 : 2310264
+13 : 2644520
+14 : 2250192
+15 : 1260672

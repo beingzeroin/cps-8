@@ -1,7 +1,24 @@
 # depslib dependency file v1.0
-1451322513 source:c:\users\welcome\desktop\cps-8\pavan507\trie\main.c
-	<stdio.h>
+1451360325 source:c:\users\sandy\desktop\cps-8\sandeep\trie\trie.cpp
+	"trie.h"
 	<stdlib.h>
-	<stdbool.h>
-	<string.h>
+	<stdio.h>
+	<assert.h>
+
+1451360491 source:c:\users\sandy\desktop\cps-8\sandeep\trie\main.cpp
+	<iostream>
+	"trie.h"
+	<stdio.h>
+
+1451357575 c:\users\sandy\desktop\cps-8\sandeep\trie\trie.h
+	<stdlib.h>
+
+1451409679 source:c:\users\welcome\desktop\cps-8\pavan507\trie\main.cpp
+	<iostream>
+	"trie.h"
+	<stdio.h>
+	<assert.h>
+
+1451361634 c:\users\welcome\desktop\cps-8\pavan507\trie\trie.h
+	<stdlib.h>
 

@@ -12,14 +12,19 @@ struct trien *createTrieNode()
     return newNode;
 };
 
-bool rInsertWordInTrie(TNode *root,char word[])
+bool rinsertWordInTrie(TNode *root, char *word)
 {
     if(word[0]=='\0')
     {
         if(root->isEOW==true)
             return false;
+        root->isEOW = true;
         return true;
     }
+    int idx = word[0]-'a';
+    if(root->next[idx]==NULL)
+        root->next[idx] = createTrieNode();
+    return rinsertWordInTrie(root->next[idx], word+1);
 }
 
 bool insertWordInTrie(TNode *root,char *word)
@@ -58,21 +63,43 @@ void printWordsInTrie(TNode *root)
     }
 }
 
-bool deleteWordFromTrie(TNode *root,char *word)
+bool isLeaf(TNode *root)
+{
+    for(int i=0;i<ALPHABET_SIZE;i++)
+        if(root->next[i]!=NULL)
+            return false;
+    return true;
+}
+
+bool deleteWordFromTrie(TNode *root, char *word)
 {
     if(root==NULL)
         return false;
-
-    int idx=word[0]-'a';
-    if(deleteWordFromTrie(root->next[idx],word+1))
+    if(word[0]=='\0')
     {
-        root->next[idx]=NULL;
-        if(isLeaf(root) && root->isEOW)
+        if(root->isEOW==false)
+            return false;
+        if(isLeaf(root))
         {
-
+            free(root);
+            return true;
+        }
+        else
+        {
+            root->isEOW = false;
+            return false;
         }
     }
-
+    int idx = word[0] - 'a';
+    if(deleteWordFromTrie(root->next[idx], word+1))
+    {
+        root->next[idx] = NULL;
+        if(isLeaf(root) && root->isEOW==false)
+        {
+            free(root);
+            return true;
+        }
+    }
 }
 
 

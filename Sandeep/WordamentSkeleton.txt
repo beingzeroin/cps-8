@@ -8,6 +8,7 @@ void printWordsStartingAt(int i, int j)
 {
 	
 	// Keep board[i][j]
+       
 
 	if(strlen(word)==3)
 	{
@@ -15,7 +16,29 @@ void printWordsStartingAt(int i, int j)
 		count[strlen(word)]++;
 	}
 
+<<<<<<< HEAD
+	// for all neighbors of board[i][j] make recursive call
+	
+=======
 	// for all neighbors of board[i][j] make recursive call	
+<<<<<<< HEAD
+            for(i-1;r<i+1;r++)
+               for(j-1;c<j+1;c++)
+
+=======
+	for(r=i-1;r<=i+1;r++)
+<<<<<<< HEAD
+		for(j-1;c<=j+1;c++)
+			if(isValid(r,c)
+				printWordsStartingAt(r,j);
+=======
+		for(c=j-1;c<=j+1;c++)
+			if(isValid(r,c))
+				printWordsStartingAt(r,c);
+				
+>>>>>>> 6fd26ef8bca61539cf09865443377c3796d0b50a
+>>>>>>> 923a691654f0de4e74ba5c3c63f13aa4ae8c514c
+>>>>>>> 82fa6e719a18b02110339093b71e7bc1d1e695cd
 
 }
 

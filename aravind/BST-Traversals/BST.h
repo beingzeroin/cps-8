@@ -19,6 +19,8 @@ BSTNode *rdeleteBSTNode(BSTNode *root,ElementType data);
 BSTNode *createRandomBST(int nodeCount, int maxVal);
 bool isBST(BSTNode *h);
 void print_ascii_tree(BSTNode *t);
+bool hasSum(BSTNode *r,int sum);
+
 
 void iterativePreorder(BSTNode *r);
 void iterativeInorder(BSTNode *r);
