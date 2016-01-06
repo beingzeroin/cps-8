@@ -119,6 +119,42 @@ void iterativePostrder(BSTNode *r)
 void iterativePreorder(BSTNode *r)
 {
     stack<BSTNode*> mystack;
+<<<<<<< HEAD
+     Stack *s=createStack();
+     while(1)
+     {
+         while(r!=NULL)
+         {
+
+             printf("%d",r->data);
+             mystack.push(r);
+             r=r->left;
+         }
+         if(myStack.empty())
+            break;
+         r=myStack.top();
+         myStack.pop();
+         r=r->right;
+     }
+
+}
+void iterativeInorder(BSTNode *r)
+{
+    stack<BSTNode*> mystack;
+    Stack *s=createStack();
+    while(1)
+    {
+       while(r!=NULL)
+       {
+        mystack.push(r);
+
+
+       }
+
+    }
+
+
+=======
 //    stack *s=createstack;
 
     while(1)
@@ -129,6 +165,7 @@ void iterativePreorder(BSTNode *r)
             mystack.push(r);
             r = r->left;
         }
+>>>>>>> bf5bc6a76138e45f4e664e0f39b947f32f920989
 
         if(mystack.empty())
             break;
