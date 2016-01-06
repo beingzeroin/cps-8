@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1452048718 source:c:\users\beingzero\desktop\cps-8\karthik\avl\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	"avl.h"
+
+1452048681 source:c:\users\beingzero\desktop\cps-8\karthik\avl\avl.cpp
+	"avl.h"
+	<stdlib.h>
+	<stdio.h>
+
+1452051978 c:\users\beingzero\desktop\cps-8\karthik\avl\avl.h
+
