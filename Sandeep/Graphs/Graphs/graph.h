@@ -10,8 +10,6 @@ struct graph
     int nv;
     int ne;
     LLNode** adjList;
-
-
 };
 
 Graph *createGraph(int nv);
@@ -21,16 +19,8 @@ Graph *destroyGraph(Graph *g);
 
 void printGraph(Graph *g);
 
-
 void dfs(Graph *g);
-void dfsWithStart(Graph *g, int v);
-
 void bfs(Graph *g);
-void bfs2(Graph *g, int v);
-
-void dfs(Graph *g,int v);
-void bfs(Graph *g,int v);
-
 
 void printPath(Graph *g, int s, int d);
 
