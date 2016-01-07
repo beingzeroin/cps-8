@@ -40,7 +40,7 @@ void stackUnitTests()
     assert(s==NULL);
 }
 
-void queueUnitTests()
+/*void queueUnitTests()
 {
     printf("\nQueue Unit Tests\n");
 
@@ -69,12 +69,12 @@ void queueUnitTests()
         i++;
     }
     q = destroyQueue(q);
-}
+}*/
 
 void runUnitTests()
 {
-    //stackUnitTests();
-    queueUnitTests();
+    stackUnitTests();
+    //queueUnitTests();
 }
 
 int main()

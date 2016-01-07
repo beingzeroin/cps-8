@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1443032919 source:c:\users\sandy\desktop\avl\avl.c
+
+1443033261 source:c:\users\sandy\desktop\avl\main.c
+	<stdio.h>
+	<stdlib.h>
+	"avl.h"
+
+1443033094 source:c:\users\sandy\desktop\avl\prettyprinttree.c
+	"avl.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1443032938 c:\users\sandy\desktop\avl\avl.h
+
+1443033096 source:c:\users\welcome\desktop\cps-8\pavan507\avl\prettyprinttree.c
+	"avl.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1452051430 c:\users\welcome\desktop\cps-8\pavan507\avl\avl.h
+
+1452081121 source:c:\users\welcome\desktop\cps-8\pavan507\avl\main.c
+	<stdio.h>
+	<stdlib.h>
+	"avl.h"
+
+1452081457 source:c:\users\welcome\desktop\cps-8\pavan507\avl\avl.c
+	"avl.h"
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+	<assert.h>
+
