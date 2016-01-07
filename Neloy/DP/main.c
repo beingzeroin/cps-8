@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 long long table[1000];
 
-int rec(int n)
+long long rec(int n)
 {
     if(n==1)
         return 1;
@@ -19,7 +19,7 @@ int rec(int n)
         table[n-2]=rec(n-2);
     if(table[n-4]==-1)
         table[n-4]=rec(n-4);
-    if(table[n]<0)
+    if(table[n]==-1)
         table[n] = table[n-1]+table[n-2]+table[n-4];
     return table[n];
 }
@@ -27,5 +27,6 @@ int main()
 {
     int n;
     scanf("%d",&n);
+    memset(table,-1,sizeof(table));
     printf("%lld\n",rec(n));
 }
