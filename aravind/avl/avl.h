@@ -1,19 +1,24 @@
 #ifndef AVL_H_INCLUDED
 #define AVL_H_INCLUDED
 
-typedef struct avlnode avlNode;
-struct avlnode
+typedef struct avlNode AVLNode;
+struct avlNode
 {
-    int data;
-    int bf;
-    int height;
-    avlNode *left, *right;
+	int data;
+	AVLNode *left, *right;
+	int balanceFactor;
+	int height;
 };
 
-avlNode *createAVLNode (int data);
-avlNode *insertAVL(avlNode *root, int data);
-avlNode *deleteAVL(avlNode *root, int data);
-avlNode *inorder(avlNode *root, int data);
-int height (avlNode *node);
+AVLNode *createAVLNode(int data);
+AVLNode *insertAVL(AVLNode *root, int data);
+AVLNode *searchAVL(AVLNode *root, int data);
+AVLNode *deleteAVL(AVLNode *root, int data);
+void inorderAVL(AVLNode *root);
+int MAX (int X, int Y);
+
+AVLNode *createRandomAVLTree(int nodeCount);
+void prettyPrintAVL(AVLNode *root);
+
 
 #endif // AVL_H_INCLUDED
