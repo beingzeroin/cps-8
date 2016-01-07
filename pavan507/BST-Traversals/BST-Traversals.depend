@@ -27,7 +27,7 @@
 	<stdbool.h>
 	<stdio.h>
 
-1451319032 c:\users\welcome\desktop\cps-8\pavan507\bst-traversals\bst.h
+1451877154 c:\users\welcome\desktop\cps-8\pavan507\bst-traversals\bst.h
 
 1450926394 source:c:\users\welcome\desktop\cps-8\pavan507\bst-traversals\printbinarytree.cpp
 	"BST.h"
@@ -41,7 +41,7 @@
 	"BST.h"
 	<assert.h>
 
-1451319261 source:c:\users\welcome\desktop\cps-8\pavan507\bst-traversals\traversals.cpp
+1451319492 source:c:\users\welcome\desktop\cps-8\pavan507\bst-traversals\traversals.cpp
 	<stack>
 	"BST.h"
 	<stdlib.h>
