@@ -27,7 +27,7 @@ void rotateLeft(AVLNode *r)
     r->right=r->right->right;
     free(del);
 }
-void roatateRight(AVLNode *r)
+void rotateRight(AVLNode *r)
 {
     AVLNode *n=createNode(r->data);
     r->data=r->left->data;
@@ -87,9 +87,9 @@ AVLNode *deleteAVL(AVLNode *root,int data)
         return root;
     if(data<root->data)
         root->left=deleteAVL(root->left,data);
-    if(data>root->data)
+    else if(data>root->data)
         root->right=deleteAVL(root->right,data);
-    if(data==root->data)
+    else
     {
 
     }
