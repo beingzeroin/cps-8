@@ -16,28 +16,6 @@ int MAX(int a,int b)
         return a;
     return b;
 }
-void rotateLeft(AVLNode *r)
-{
-    AVLNode *n=createNode(r->data);
-    r->data=r->right->data;
-    n->left=r->left;
-    n->right=r->right->left;
-    r->left=n;
-    AVLNode *del=r->right;
-    r->right=r->right->right;
-    free(del);
-}
-void rotateRight(AVLNode *r)
-{
-    AVLNode *n=createNode(r->data);
-    r->data=r->left->data;
-    n->right=r->right;
-    n->left=r->left->right;
-    r->right=n;
-    AVLNode *del=r->left;
-    r->left=r->left->left;
-    free(del);
-}
 int getHeight(AVLNode *root)
 {
     if(root==NULL)
@@ -50,14 +28,35 @@ int getBF(AVLNode *root)
         return 0;
     return getHeight(root->left)-getHeight(root->right);
 }
-AVLNode *insertAVL(AVLNode *root,int data)
+void rotateLeft(AVLNode *r)
 {
-    if(root==NULL)
-        return createNode(data);
-    if(data<root->data)
-        root->left=insertAVL(root->left,data);
-    if(data>root->data)
-        root->right=insertAVL(root->right,data);
+    AVLNode *n=createNode(r->data);
+    r->data=r->right->data;
+    n->left=r->left;
+    n->right=r->right->left;
+    n->height=1+MAX(getHeight(n->left),getHeight(n->right));
+    r->left=n;
+    AVLNode *del=r->right;
+    r->right=r->right->right;
+    free(del);
+    r->height=1+MAX(getHeight(r->left),getHeight(r->right));
+}
+void rotateRight(AVLNode *r)
+{
+    AVLNode *n=createNode(r->data);
+    r->data=r->left->data;
+    n->right=r->right;
+    n->left=r->left->right;
+    n->height=1+MAX(getHeight(n->left),getHeight(n->right));
+    r->right=n;
+    AVLNode *del=r->left;
+    r->left=r->left->left;
+    free(del);
+    r->height=1+MAX(getHeight(r->left),getHeight(r->right));
+}
+
+AVLNode *decideAndRotate(AVLNode *root)
+{
     if(getBF(root)==-2)
     {
         if(getBF(root->right)==-1)
@@ -78,7 +77,18 @@ AVLNode *insertAVL(AVLNode *root,int data)
             rotateRight(root);
         }
     }
-    root->height=1+MAX(root->left->height,root->right->height);
+    root->height=1+MAX(getHeight(root->left),getHeight(root->right));
+    return root;
+}
+AVLNode *insertAVL(AVLNode *root,int data)
+{
+    if(root==NULL)
+        return createNode(data);
+    if(data<root->data)
+        root->left=insertAVL(root->left,data);
+    if(data>root->data)
+        root->right=insertAVL(root->right,data);
+    root=decideAndRotate(root);
     return root;
 }
 AVLNode *deleteAVL(AVLNode *root,int data)
@@ -100,6 +110,6 @@ void inorder(AVLNode *root)
     if(root==NULL)
         return;
     inorder(root->left);
-    printf("%d ",root->data);
+    printf("%d(%d) ",root->data,getBF(root));
     inorder(root->right);
 }

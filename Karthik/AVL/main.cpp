@@ -11,5 +11,6 @@ int main()
     root=insertAVL(root,2);
     root=insertAVL(root,10);
     root=insertAVL(root,8);
+//    prettyPrintAVL(root);
     inorder(root);
 }
