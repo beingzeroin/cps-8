@@ -17,7 +17,9 @@ int main()
     root = insertAVL(root, 70);
 
     prettyPrintAVL(root);
-     inorderAVL(root);
+    root=deleteAVL(root,80);
+    prettyPrintAVL(root);
+    inorderAVL(root);
     // prettyPrintAVL(root);
 
 

@@ -22,10 +22,13 @@ void rotateLeft(AVLNode *root)
     n->left=root->left;
     n->right=root->right->left;
 root->height=1+MAX(getHeight(root->right),getHeight(root->left));
+root->balanceFactor=getHeight(root->left)-getHeight(root->right);
     AVLNode *c=root->right;
     root->left=n;
     root->right=c->right;
 root->height=1+MAX(getHeight(root->right),getHeight(root->left));
+root->balanceFactor=getHeight(root->left)-getHeight(root->right);
+
     free(c);
 
 }
@@ -36,10 +39,12 @@ void rotateRight(AVLNode *root)
     n->right=root->right;
     n->left=root->left->right;
     root->height=1+MAX(getHeight(root->right),getHeight(root->left));
+    root->balanceFactor=getHeight(root->left)-getHeight(root->right);
     AVLNode *c=root->left;
     root->right=n;
-    root->left=c->right;
+    root->left=c->left;
     root->height=1+MAX(getHeight(root->right),getHeight(root->left));
+    root->balanceFactor=getHeight(root->left)-getHeight(root->right);
     free(c);
 
 }
@@ -49,15 +54,10 @@ int getHeight(AVLNode *root)
         return 0;
     return root->height;
 }
-AVLNode *insertAVL(AVLNode *root, int data)
+void decideAndRotate(AVLNode *root)
 {
-    if(root==NULL)
-        return createAVLNode(data);
-    if(data<root->data)
-        root->left=insertAVL(root->left,data);
-    else
-        root->right=insertAVL(root->right,data);
-        root->height=1+MAX(getHeight(root->right),getHeight(root->left));
+
+     root->height=1+MAX(getHeight(root->right),getHeight(root->left));
         root->balanceFactor=getHeight(root->left)-getHeight(root->right);
         if(root->balanceFactor<-1)
         {
@@ -87,6 +87,17 @@ AVLNode *insertAVL(AVLNode *root, int data)
                 rotateRight(root);
             }
         }
+
+}
+AVLNode *insertAVL(AVLNode *root, int data)
+{
+    if(root==NULL)
+        return createAVLNode(data);
+    if(data<root->data)
+        root->left=insertAVL(root->left,data);
+    else
+        root->right=insertAVL(root->right,data);
+       decideAndRotate(root);
     return root;
 
 }
@@ -97,9 +108,46 @@ AVLNode *searchAVL(AVLNode *root, int data)
 }
 AVLNode *deleteAVL(AVLNode *root, int data)
 {
-    assert(false);
-    return NULL;
+
+
+    AVLNode *c;
+    //BSTNode *temp=root;
+    if(root==NULL)
+        return root;
+    else if(data<root->data)
+        root->left = deleteAVL(root->left,data);
+    else if(data>root->data)
+        root->right = deleteAVL(root->right,data);
+    else
+    {
+        if(root->left==NULL)//one right child
+        {
+            c=root->right;
+            free(root);
+            return c;
+        }
+        else if(root->right==NULL)//one left child
+        {
+            c=root->left;
+            free(root);
+            return c;
+        }
+        else                    //two children
+        {
+            c=root->right;      //right subtree
+            while(c->left!=NULL)
+                c=c->left;
+            root->data=c->data;
+
+            // Delete c->data
+            root->right = deleteAVL(root->right, c->data);
+        }
+    }
+    decideAndRotate(root);
+        return root;
 }
+
+
 void inorderAVL(AVLNode *root)
 {
     if(root==NULL)

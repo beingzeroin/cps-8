@@ -22,6 +22,6 @@ int main()
     int i;
     for(i=0;i<1000;i++)
         dp[i]=-1;
-    printf("ll%d ",rec(50));
+    printf("%ld ",rec(50));
     return 0;
 }
