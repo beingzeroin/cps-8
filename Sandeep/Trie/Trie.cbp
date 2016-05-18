@@ -33,8 +33,6 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
-		<Unit filename="trie.cpp" />
-		<Unit filename="trie.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
